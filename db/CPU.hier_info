@@ -1,6 +1,19 @@
-|testeBUS
-B <= inst.DB_MAX_OUTPUT_PORT_TYPE
-A[1] => inst.IN1
-A[0] => inst.IN0
+|Reg4
+S0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLEAR => inst1.IN0
+CLEAR => inst5.IN0
+CLEAR => inst6.IN0
+CLEAR => inst7.IN0
+CLK1 => inst.CLK
+CLK1 => inst2.CLK
+CLK1 => inst3.CLK
+CLK1 => inst4.CLK
+D0 => inst.DATAIN
+S1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+D1 => inst2.DATAIN
+S2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+D2 => inst3.DATAIN
+S3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+D3 => inst4.DATAIN
 
 

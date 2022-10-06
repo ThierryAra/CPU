@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY mem256x16
+set_global_assignment -name TOP_LEVEL_ENTITY Count8
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:47:41  SEPTEMBER 13, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
@@ -67,7 +67,7 @@ set_global_assignment -name QIP_FILE rom01.qip
 set_global_assignment -name BDF_FILE mux.bdf
 set_global_assignment -name BDF_FILE display.bdf
 set_location_assignment PIN_Y2 -to CLK_in
-set_location_assignment PIN_Y23 -to input_key
+set_location_assignment PIN_AB23 -to input_key
 set_location_assignment PIN_AB28 -to A[0]
 set_location_assignment PIN_AC28 -to A[1]
 set_location_assignment PIN_AC27 -to A[2]

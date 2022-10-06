@@ -4,115 +4,75 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "b2",
+					"name" : "count_s[7]",
 					"strict" : false
 				},
 				{
-					"name" : "c2",
+					"name" : "count_s[6]",
 					"strict" : false
 				},
 				{
-					"name" : "d2",
+					"name" : "count_s[5]",
 					"strict" : false
 				},
 				{
-					"name" : "e2",
+					"name" : "count_s[4]",
 					"strict" : false
 				},
 				{
-					"name" : "g2",
+					"name" : "count_s[3]",
 					"strict" : false
 				},
 				{
-					"name" : "f2",
+					"name" : "count_s[2]",
 					"strict" : false
 				},
 				{
-					"name" : "b1",
+					"name" : "count_s[1]",
 					"strict" : false
 				},
 				{
-					"name" : "c1",
+					"name" : "count_s[0]",
 					"strict" : false
 				},
 				{
-					"name" : "d1",
+					"name" : "A[7]",
 					"strict" : false
 				},
 				{
-					"name" : "e1",
+					"name" : "JUMP_",
 					"strict" : false
 				},
 				{
-					"name" : "f1",
+					"name" : "MCLEAR",
 					"strict" : false
 				},
 				{
-					"name" : "g1",
+					"name" : "A[6]",
 					"strict" : false
 				},
 				{
-					"name" : "b3",
+					"name" : "A[5]",
 					"strict" : false
 				},
 				{
-					"name" : "f3",
+					"name" : "A[4]",
 					"strict" : false
 				},
 				{
-					"name" : "c3",
+					"name" : "A[3]",
 					"strict" : false
 				},
 				{
-					"name" : "d3",
+					"name" : "A[2]",
 					"strict" : false
 				},
 				{
-					"name" : "e3",
+					"name" : "A[1]",
 					"strict" : false
 				},
 				{
-					"name" : "g3",
-					"strict" : false
-				},
-				{
-					"name" : "c4",
-					"strict" : false
-				},
-				{
-					"name" : "d4",
-					"strict" : false
-				},
-				{
-					"name" : "e4",
-					"strict" : false
-				},
-				{
-					"name" : "g4",
-					"strict" : false
-				},
-				{
-					"name" : "b4",
-					"strict" : false
-				},
-				{
-					"name" : "f4",
-					"strict" : false
-				},
-				{
-					"name" : "a11",
-					"strict" : false
-				},
-				{
-					"name" : "a21",
-					"strict" : false
-				},
-				{
-					"name" : "a31",
-					"strict" : false
-				},
-				{
-					"name" : "a41",
+					"name" : "A[0]",
 					"strict" : false
 				},
 				{
@@ -125,46 +85,6 @@
 				},
 				{
 					"name" : "CLK_in",
-					"strict" : false
-				},
-				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "JUMP",
-					"strict" : false
-				},
-				{
-					"name" : "MCLEAR",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[3]",
-					"strict" : false
-				},
-				{
-					"name" : "A[4]",
-					"strict" : false
-				},
-				{
-					"name" : "A[5]",
-					"strict" : false
-				},
-				{
-					"name" : "A[6]",
-					"strict" : false
-				},
-				{
-					"name" : "A[7]",
 					"strict" : false
 				}
 			]

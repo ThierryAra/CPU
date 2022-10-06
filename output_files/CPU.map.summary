@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Sep 28 13:37:33 2022
+Analysis & Synthesis Status : Successful - Thu Oct  6 15:12:19 2022
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : CPU
-Top-level Entity Name : Count8
+Top-level Entity Name : mem256x16
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 48
+Total logic elements : 109
+    Total combinational functions : 109
+    Dedicated logic registers : 26
+Total registers : 26
+Total pins : 41
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 4,096
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

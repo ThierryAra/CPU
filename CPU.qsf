@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY Count8
+set_global_assignment -name TOP_LEVEL_ENTITY mem256x16
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:47:41  SEPTEMBER 13, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
@@ -61,7 +61,6 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name BDF_FILE CPU.bdf
 set_global_assignment -name BDF_FILE Count8.bdf
 set_global_assignment -name BDF_FILE Reg16.bdf
-set_global_assignment -name BDF_FILE testeBUS.bdf
 set_global_assignment -name BDF_FILE ULA.bdf
 set_global_assignment -name BDF_FILE mem256x16.bdf
 set_global_assignment -name QIP_FILE rom01.qip
@@ -108,9 +107,29 @@ set_location_assignment PIN_Y19 -to g4
 set_location_assignment PIN_Y24 -to rst_deb
 set_location_assignment PIN_AA23 -to JUMP
 set_location_assignment PIN_AA22 -to MCLEAR
+set_location_assignment PIN_AB23 -to CLK_
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_location_assignment PIN_E21 -to b_s[0]
+set_location_assignment PIN_E22 -to b_s[1]
+set_location_assignment PIN_E25 -to b_s[2]
+set_location_assignment PIN_E24 -to b_s[3]
+set_location_assignment PIN_H21 -to b_s[4]
+set_location_assignment PIN_G20 -to b_s[5]
+set_location_assignment PIN_G22 -to b_s[6]
+set_location_assignment PIN_G21 -to b_s[7]
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CYCLONEIII_CONFIGURATION_DEVICE EPCS16
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name BDF_FILE COUNT_NO_DISPLAY.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_AB23 -to CLK_
-set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

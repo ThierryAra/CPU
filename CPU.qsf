@@ -39,18 +39,16 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY Count8
+set_global_assignment -name TOP_LEVEL_ENTITY CPU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:47:41  SEPTEMBER 13, 2022"
-set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (VHDL)"
-set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
@@ -64,7 +62,6 @@ set_global_assignment -name BDF_FILE Reg16.bdf
 set_global_assignment -name BDF_FILE ULA.bdf
 set_global_assignment -name BDF_FILE mem256x16.bdf
 set_global_assignment -name QIP_FILE rom01.qip
-set_global_assignment -name BDF_FILE mux.bdf
 set_global_assignment -name BDF_FILE display.bdf
 set_location_assignment PIN_Y2 -to CLK_in
 set_location_assignment PIN_AB23 -to input_key
@@ -108,7 +105,6 @@ set_location_assignment PIN_Y24 -to rst_deb
 set_location_assignment PIN_AA23 -to JUMP
 set_location_assignment PIN_AA22 -to MCLEAR
 set_location_assignment PIN_AB23 -to CLK_
-set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
 set_location_assignment PIN_E21 -to b_s[0]
 set_location_assignment PIN_E22 -to b_s[1]
 set_location_assignment PIN_E25 -to b_s[2]
@@ -129,7 +125,18 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_global_assignment -name BDF_FILE COUNT_NO_DISPLAY.bdf
+set_location_assignment PIN_F19 -to b_out[1]
+set_location_assignment PIN_E19 -to b_out[2]
+set_location_assignment PIN_F21 -to b_out[3]
+set_location_assignment PIN_F18 -to b_out[4]
+set_location_assignment PIN_E18 -to b_out[5]
+set_location_assignment PIN_J19 -to b_out[6]
+set_location_assignment PIN_H19 -to b_out[7]
+set_location_assignment PIN_G19 -to b_out[0]
+set_global_assignment -name BDF_FILE UC.bdf
+set_global_assignment -name BDF_FILE dmux1x4.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf

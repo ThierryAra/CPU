@@ -4,83 +4,139 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "count_s[7]",
+					"name" : "MasterCLEAR",
 					"strict" : false
 				},
 				{
-					"name" : "count_s[6]",
+					"name" : "JUMP_UC",
 					"strict" : false
 				},
 				{
-					"name" : "count_s[5]",
+					"name" : "ResetREG",
 					"strict" : false
 				},
 				{
-					"name" : "count_s[4]",
+					"name" : "ULA0",
 					"strict" : false
 				},
 				{
-					"name" : "count_s[3]",
+					"name" : "ULA1",
 					"strict" : false
 				},
 				{
-					"name" : "count_s[2]",
+					"name" : "contador[7]",
 					"strict" : false
 				},
 				{
-					"name" : "count_s[1]",
+					"name" : "contador[6]",
 					"strict" : false
 				},
 				{
-					"name" : "count_s[0]",
+					"name" : "contador[5]",
 					"strict" : false
 				},
 				{
-					"name" : "A[7]",
+					"name" : "contador[4]",
 					"strict" : false
 				},
 				{
-					"name" : "JUMP_",
+					"name" : "contador[3]",
+					"strict" : false
+				},
+				{
+					"name" : "contador[2]",
+					"strict" : false
+				},
+				{
+					"name" : "contador[1]",
+					"strict" : false
+				},
+				{
+					"name" : "contador[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RgIN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RgIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RgTO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RgTO[0]",
 					"strict" : false
 				},
 				{
 					"name" : "MCLEAR",
-					"strict" : false
-				},
-				{
-					"name" : "A[6]",
-					"strict" : false
-				},
-				{
-					"name" : "A[5]",
-					"strict" : false
-				},
-				{
-					"name" : "A[4]",
-					"strict" : false
-				},
-				{
-					"name" : "A[3]",
-					"strict" : false
-				},
-				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "rst_deb",
-					"strict" : false
-				},
-				{
-					"name" : "input_key",
 					"strict" : false
 				},
 				{

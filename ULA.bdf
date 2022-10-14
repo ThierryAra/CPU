@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2021  Intel Corporation. All rights reserved.
+Copyright (C) 2019  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -22,9 +22,9 @@ https://fpgasoftware.intel.com/eula.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 96 424 264 440)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "pin_name2" (rect 5 0 58 17)(font "Intel Clear" ))
+	(rect 184 216 352 232)
+	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
+	(text "rst_deb" (rect 5 0 43 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -34,30 +34,79 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 4)(pt 113 8))
 		(line (pt 109 12)(pt 113 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 128 7 149 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 120 208 184 232))
 )
 (pin
 	(input)
-	(rect 208 176 224 344)
-	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
-	(text "A[15..0]" (rect 6 5 18 44)(font "Arial" )(vertical))
-	(pt 8 168)
+	(rect 184 232 352 248)
+	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
+	(text "input_key" (rect 5 0 55 13)(font "Intel Clear" ))
+	(pt 168 8)
 	(drawing
-		(line (pt 4 84)(pt 4 109))
-		(line (pt 12 84)(pt 12 109))
-		(line (pt 8 113)(pt 8 168))
-		(line (pt 4 84)(pt 12 84))
-		(line (pt 12 109)(pt 8 113))
-		(line (pt 4 109)(pt 8 113))
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
 	)
-	(rotate270)
-	(text "VCC" (rect -1 128 9 148)(font "Arial" (font_size 6))(vertical))
+	(text "VCC" (rect 128 7 149 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 120 232 184 256))
+)
+(pin
+	(input)
+	(rect 176 352 344 368)
+	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
+	(text "operando" (rect 5 0 53 11)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 149 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 176 368 344 384)
+	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
+	(text "regIN[3..0]" (rect 5 0 56 11)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 149 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 176 416 344 432)
+	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
+	(text "S[1..0]" (rect 5 0 36 11)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 149 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(output)
-	(rect 416 432 592 448)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "B[15..0]" (rect 90 0 126 17)(font "Intel Clear" ))
+	(rect 600 416 776 432)
+	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
+	(text "regTO[3..0]" (rect 90 0 146 11)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -70,102 +119,57 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 280 392 392 488)
-	(text "LPM_ROM" (rect 25 0 100 16)(font "Arial" (font_size 10)))
-	(text "inst" (rect 3 85 23 99)(font "Arial" (font_size 8)))
+	(rect 432 176 624 288)
+	(text "debouncer" (rect 5 0 59 11)(font "Arial" ))
+	(text "inst1" (rect 8 96 32 109)(font "Intel Clear" ))
 	(port
-		(pt 0 24)
+		(pt 0 32)
 		(input)
-		(text "address[LPM_WIDTHAD-1..0]" (rect 20 17 186 31)(font "Arial" (font_size 8)))
-		(text "address[]" (rect 20 17 74 31)(font "Arial" (font_size 8)))
-		(line (pt 0 24)(pt 16 24)(line_width 3))
+		(text "clk_fpga" (rect 0 0 43 11)(font "Arial" ))
+		(text "clk_fpga" (rect 21 27 64 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
 	)
 	(port
-		(pt 0 40)
+		(pt 0 48)
 		(input)
-		(text "inclock" (rect 20 33 58 47)(font "Arial" (font_size 8)))
-		(text "inclock" (rect 20 33 58 47)(font "Arial" (font_size 8)))
-		(line (pt 0 40)(pt 16 40))
+		(text "rst_debouncer" (rect 0 0 71 11)(font "Arial" ))
+		(text "rst_debouncer" (rect 21 43 92 54)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
 	)
 	(port
-		(pt 0 72)
+		(pt 0 64)
 		(input)
-		(text "memenab" (rect 20 65 74 79)(font "Arial" (font_size 8)))
-		(text "memenab" (rect 20 65 74 79)(font "Arial" (font_size 8)))
-		(line (pt 0 72)(pt 16 72))
+		(text "input_key" (rect 0 0 48 11)(font "Arial" ))
+		(text "input_key" (rect 21 59 69 70)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
 	)
 	(port
-		(pt 0 56)
-		(input)
-		(text "outclock" (rect 20 49 67 63)(font "Arial" (font_size 8)))
-		(text "outclock" (rect 20 49 67 63)(font "Arial" (font_size 8)))
-		(line (pt 0 56)(pt 16 56))
-	)
-	(port
-		(pt 112 48)
+		(pt 192 32)
 		(output)
-		(text "q[LPM_WIDTH-1..0]" (rect 80 41 188 55)(font "Arial" (font_size 8)))
-		(text "q[]" (rect 80 41 94 55)(font "Arial" (font_size 8)))
-		(line (pt 96 48)(pt 112 48)(line_width 3))
+		(text "out_key" (rect 0 0 40 11)(font "Arial" ))
+		(text "out_key" (rect 138 27 178 38)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32))
 	)
 	(parameter
-		"LPM_ADDRESS_CONTROL"
-		""
-		"Should the address and control ports be registered?"
-		"\"REGISTERED\"" "\"UNREGISTERED\"" 
-	)
-	(parameter
-		"LPM_FILE"
-		""
-		"File containing initial contents of memory array"
-	)
-	(parameter
-		"LPM_NUMWORDS"
-		""
-		"Number of memory words, default is 2^LPM_WIDTHAD"
-	)
-	(parameter
-		"LPM_OUTDATA"
-		"\"UNREGISTERED\""
-		"Should the output data be registered?"
-		"\"REGISTERED\"" "\"UNREGISTERED\"" 
-	)
-	(parameter
-		"LPM_WIDTH"
+		"DELAY_BITS"
 		"16"
-		"Data width in bits, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
-	)
-	(parameter
-		"LPM_WIDTHAD"
-		"16"
-		"Number of address lines, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" 
-		(type "PARAMETER_UNKNOWN")	)
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(line (pt 16 16)(pt 96 16))
-		(line (pt 16 80)(pt 96 80))
-		(line (pt 96 80)(pt 96 16))
-		(line (pt 16 80)(pt 16 16))
+		(rectangle (rect 16 16 176 96))
 	)
-	(annotation_block (parameter)(rect 392 256 660 389))
+	(annotation_block (parameter)(rect 624 136 808 176))
 )
 (connector
-	(pt 280 432)
-	(pt 264 432)
+	(text "CLK_out" (rect 647 192 690 205)(font "Intel Clear" ))
+	(pt 624 208)
+	(pt 664 208)
 )
 (connector
-	(pt 280 416)
-	(pt 216 416)
-	(bus)
+	(pt 352 224)
+	(pt 432 224)
 )
 (connector
-	(pt 216 344)
-	(pt 216 416)
-	(bus)
-)
-(connector
-	(pt 392 440)
-	(pt 416 440)
-	(bus)
+	(pt 352 240)
+	(pt 432 240)
 )

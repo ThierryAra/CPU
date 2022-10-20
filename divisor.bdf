@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 1208 288 1224 456)
 	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
-	(text "A1" (rect -1 5 16 17)(font "Intel Clear" )(vertical))
+	(text "A1" (rect 0 4 17 16)(font "Intel Clear" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -158,7 +158,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(bidir)
-	(rect 1808 -104 1984 -88)
+	(rect 1848 -104 2024 -88)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "R0" (rect 90 0 104 12)(font "Arial" ))
 	(pt 0 8)
@@ -1045,7 +1045,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 1000 312 1032 344)
 	(text "GND" (rect 16 3 26 24)(font "Arial" (font_size 6))(vertical))
-	(text "inst18" (rect 21 1 38 29)(font "Intel Clear" )(vertical)(invisible))
+	(text "inst18" (rect 20 0 37 28)(font "Intel Clear" )(vertical)(invisible))
 	(port
 		(pt 0 16)
 		(output)
@@ -1063,7 +1063,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 1256 568 1288 600)
 	(text "GND" (rect 16 3 26 24)(font "Arial" (font_size 6))(vertical))
-	(text "inst19" (rect 21 1 38 29)(font "Intel Clear" )(vertical)(invisible))
+	(text "inst19" (rect 20 0 37 28)(font "Intel Clear" )(vertical)(invisible))
 	(port
 		(pt 0 16)
 		(output)
@@ -1081,7 +1081,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 1496 784 1528 816)
 	(text "GND" (rect 16 3 26 24)(font "Arial" (font_size 6))(vertical))
-	(text "inst20" (rect 21 1 38 29)(font "Intel Clear" )(vertical)(invisible))
+	(text "inst20" (rect 19 -1 36 27)(font "Intel Clear" )(vertical)(invisible))
 	(port
 		(pt 0 16)
 		(output)
@@ -1272,23 +1272,6 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 264 -88 296 -56)
-	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
-	(text "inst28" (rect 3 21 31 38)(font "Intel Clear" )(invisible))
-	(port
-		(pt 16 0)
-		(output)
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0))
-	)
-	(drawing
-		(line (pt 8 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 8))
-		(line (pt 8 8)(pt 24 8))
-	)
-)
-(symbol
 	(rect 264 -48 296 -16)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
 	(text "inst29" (rect 3 21 31 38)(font "Intel Clear" )(invisible))
@@ -1306,24 +1289,26 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 264 -144 296 -128)
-	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
-	(text "inst32" (rect 3 5 31 22)(font "Intel Clear" )(invisible))
+	(rect 384 -176 416 -144)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst45" (rect 3 21 32 33)(font "Arial" )(invisible))
 	(port
-		(pt 16 16)
+		(pt 16 0)
 		(output)
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(line (pt 16 16)(pt 16 8))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
 	)
 	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
 		(line (pt 8 8)(pt 24 8))
 	)
 )
 (symbol
-	(rect 264 -144 296 -128)
+	(rect 392 -96 424 -80)
 	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
-	(text "inst33" (rect 3 5 31 22)(font "Intel Clear" )(invisible))
+	(text "inst58" (rect 3 5 31 22)(font "Intel Clear" )(invisible))
 	(port
 		(pt 16 16)
 		(output)
@@ -1657,7 +1642,7 @@ https://fpgasoftware.intel.com/eula.
 	(pt 704 496)
 )
 (connector
-	(text "B3" (rect 448 485 465 497)(font "Intel Clear" )(vertical))
+	(text "B3" (rect 449 484 466 496)(font "Intel Clear" )(vertical))
 	(pt 464 512)
 	(pt 464 488)
 )
@@ -1748,26 +1733,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 416 792)
 )
 (connector
-	(text "R0" (rect 1438 867 1455 879)(font "Intel Clear" )(vertical))
-	(pt 1456 864)
-	(pt 1456 896)
-)
-(connector
-	(text "R1" (rect 1199 876 1216 888)(font "Intel Clear" )(vertical))
-	(pt 1216 864)
-	(pt 1216 888)
-)
-(connector
-	(text "R2" (rect 960 866 977 878)(font "Intel Clear" )(vertical))
-	(pt 976 864)
-	(pt 976 888)
-)
-(connector
-	(text "R3" (rect 720 853 737 865)(font "Intel Clear" )(vertical))
-	(pt 736 856)
-	(pt 736 880)
-)
-(connector
 	(text "A3" (rect 704 -3 721 9)(font "Intel Clear" )(vertical))
 	(pt 720 24)
 	(pt 720 -56)
@@ -1816,11 +1781,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 720 264)
 )
 (connector
-	(text "B2" (rect 280 -104 292 -87)(font "Intel Clear" ))
-	(pt 280 -88)
-	(pt 296 -88)
-)
-(connector
 	(text "B3" (rect 304 -64 316 -47)(font "Intel Clear" ))
 	(pt 304 -48)
 	(pt 280 -48)
@@ -1831,29 +1791,62 @@ https://fpgasoftware.intel.com/eula.
 	(pt 288 -184)
 )
 (connector
-	(text "B1" (rect 312 -144 324 -127)(font "Intel Clear" ))
-	(pt 280 -128)
-	(pt 304 -128)
+	(pt 432 -64)
+	(pt 408 -64)
 )
 (connector
-	(text "R0" (rect 1800 -112 1812 -95)(font "Intel Clear" ))
-	(pt 1792 -96)
-	(pt 1808 -96)
+	(text "B1" (rect 391 -76 408 -64)(font "Intel Clear" )(vertical))
+	(pt 408 -80)
+	(pt 408 -64)
 )
 (connector
-	(text "R2" (rect 1800 -80 1812 -63)(font "Intel Clear" ))
+	(pt 400 -192)
+	(pt 432 -192)
+)
+(connector
+	(text "B2" (rect 384 -203 401 -191)(font "Intel Clear" )(vertical))
+	(pt 400 -176)
+	(pt 400 -192)
+)
+(connector
+	(text "r0" (rect 1437 866 1454 875)(font "Intel Clear" )(vertical))
+	(pt 1456 864)
+	(pt 1456 896)
+)
+(connector
+	(text "r1" (rect 1198 875 1215 884)(font "Intel Clear" )(vertical))
+	(pt 1216 864)
+	(pt 1216 888)
+)
+(connector
+	(text "r2" (rect 959 865 976 874)(font "Intel Clear" )(vertical))
+	(pt 976 864)
+	(pt 976 888)
+)
+(connector
+	(text "r3" (rect 721 852 738 861)(font "Intel Clear" )(vertical))
+	(pt 736 856)
+	(pt 736 880)
+)
+(connector
+	(text "r0" (rect 1840 -112 1849 -95)(font "Intel Clear" ))
+	(pt 1832 -96)
+	(pt 1848 -96)
+)
+(connector
+	(text "r1" (rect 1805 -96 1814 -79)(font "Intel Clear" ))
+	(pt 1800 -80)
+	(pt 1808 -80)
+)
+(connector
+	(text "r2" (rect 1800 -80 1809 -63)(font "Intel Clear" ))
 	(pt 1792 -64)
 	(pt 1808 -64)
 )
 (connector
-	(text "R3" (rect 1800 -64 1812 -47)(font "Intel Clear" ))
+	(text "r3" (rect 1800 -64 1809 -47)(font "Intel Clear" ))
 	(pt 1792 -48)
 	(pt 1808 -48)
-)
-(connector
-	(text "R1" (rect 1805 -96 1817 -79)(font "Intel Clear" ))
-	(pt 1800 -80)
-	(pt 1808 -80)
 )
 (junction (pt 440 184))
 (junction (pt 200 184))

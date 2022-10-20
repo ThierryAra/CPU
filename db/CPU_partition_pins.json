@@ -4,6 +4,30 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "MasterCLEAR",
+					"strict" : false
+				},
+				{
+					"name" : "JUMP_UC",
+					"strict" : false
+				},
+				{
+					"name" : "ResetREG",
+					"strict" : false
+				},
+				{
+					"name" : "ULA0",
+					"strict" : false
+				},
+				{
+					"name" : "ULA1",
+					"strict" : false
+				},
+				{
+					"name" : "CLEARD",
+					"strict" : false
+				},
+				{
 					"name" : "b_out[7]",
 					"strict" : false
 				},
@@ -36,7 +60,243 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLK_in",
+					"name" : "display_out1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_out4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_reg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_reg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_reg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_reg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RgTO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RgTO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_reg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_reg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_reg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_reg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MEM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RG_IN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RG_IN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RG_IN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RG_IN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RgIN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RgIN[0]",
 					"strict" : false
 				},
 				{
@@ -44,23 +304,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "JUMP",
+					"name" : "rst_deb",
 					"strict" : false
 				},
 				{
-					"name" : "C[3]",
+					"name" : "input_key",
 					"strict" : false
 				},
 				{
-					"name" : "C[2]",
-					"strict" : false
-				},
-				{
-					"name" : "C[1]",
-					"strict" : false
-				},
-				{
-					"name" : "C[0]",
+					"name" : "CLK_in",
 					"strict" : false
 				}
 			]

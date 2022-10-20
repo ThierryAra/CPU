@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2019  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -21,45 +21,45 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 184 144)
-	(text "Count8" (rect 5 0 48 15)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 111 28 124)(font "Intel Clear" ))
+	(rect 16 16 192 144)
+	(text "Count8" (rect 5 0 47 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "C[3..0]" (rect 0 0 37 15)(font "Intel Clear" (font_size 8)))
-		(text "C[3..0]" (rect 21 27 58 42)(font "Intel Clear" (font_size 8)))
+		(text "C[3..0]" (rect 0 0 38 19)(font "Intel Clear" (font_size 8)))
+		(text "C[3..0]" (rect 21 27 59 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "CLK_in" (rect 0 0 41 15)(font "Intel Clear" (font_size 8)))
-		(text "CLK_in" (rect 21 43 62 58)(font "Intel Clear" (font_size 8)))
+		(text "input_key" (rect 0 0 59 19)(font "Intel Clear" (font_size 8)))
+		(text "input_key" (rect 21 43 80 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "MCLEAR" (rect 0 0 49 15)(font "Intel Clear" (font_size 8)))
-		(text "MCLEAR" (rect 21 59 70 74)(font "Intel Clear" (font_size 8)))
+		(text "MCLEAR" (rect 0 0 49 19)(font "Intel Clear" (font_size 8)))
+		(text "MCLEAR" (rect 21 59 70 78)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "JUMP" (rect 0 0 35 15)(font "Intel Clear" (font_size 8)))
-		(text "JUMP" (rect 21 75 56 90)(font "Intel Clear" (font_size 8)))
+		(text "JUMP" (rect 0 0 35 19)(font "Intel Clear" (font_size 8)))
+		(text "JUMP" (rect 21 75 56 94)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
-		(pt 168 32)
+		(pt 176 32)
 		(output)
-		(text "b_out[7..0]" (rect 0 0 62 15)(font "Intel Clear" (font_size 8)))
-		(text "b_out[7..0]" (rect 85 27 147 42)(font "Intel Clear" (font_size 8)))
-		(line (pt 168 32)(pt 152 32)(line_width 3))
+		(text "b_out[7..0]" (rect 0 0 64 19)(font "Intel Clear" (font_size 8)))
+		(text "b_out[7..0]" (rect 91 27 155 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 152 112))
+		(rectangle (rect 16 16 160 112))
 	)
 )

@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CPU -c CPU --vector_source="/home/thierryara/Documentos/USP/CPU_1/Waveform.vwf" --testbench_file="/home/thierryara/Documentos/USP/CPU_1/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CPU -c CPU --vector_source="/home/thierryara/Documentos/USP/CPU_1/Waveform.vwf" --testbench_file="/home/thierryara/Documentos/USP/CPU_1/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/thierryara/Documentos/USP/CPU_1/simulation/qsim/" CPU -c CPU</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/thierryara/Documentos/USP/CPU_1/simulation/qsim/" CPU -c CPU</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CPU -c CPU --vector_source="/home/thierryara/Documentos/USP/CPU/Waveform.vwf" --testbench_file="/home/thierryara/Documentos/USP/CPU/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off CPU -c CPU --vector_source="/home/thierryara/Documentos/USP/CPU/Waveform.vwf" --testbench_file="/home/thierryara/Documentos/USP/CPU/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/thierryara/Documentos/USP/CPU/simulation/qsim/" CPU -c CPU</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="/home/thierryara/Documentos/USP/CPU/simulation/qsim/" CPU -c CPU</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work CPU.vho
@@ -20,6 +20,9 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +41,9 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -74,16 +80,6 @@ HEADER
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
 	GRID_DUTY_CYCLE = 50;
-}
-
-SIGNAL("CLK_in")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
 }
 
 SIGNAL("contador")
@@ -366,6 +362,16 @@ SIGNAL("MasterCLEAR")
 	PARENT = "";
 }
 
+SIGNAL("JUMP_UC")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 SIGNAL("RgIN")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -436,6 +442,26 @@ SIGNAL("ULA0")
 	PARENT = "";
 }
 
+SIGNAL("CLK_in")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("CLEARD")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 SIGNAL("ULA1")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -444,30 +470,6 @@ SIGNAL("ULA1")
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
 	PARENT = "";
-}
-
-SIGNAL("JUMP_UC")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-TRANSITION_LIST("CLK_in")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1000;
-			LEVEL 0 FOR 0.5;
-			LEVEL 1 FOR 0.5;
-		}
-	}
 }
 
 TRANSITION_LIST("contador[7]")
@@ -691,19 +693,27 @@ TRANSITION_LIST("MCLEAR")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 0.1;
+		LEVEL 1 FOR 2.0;
 		NODE
 		{
-			REPEAT = 1;
-			LEVEL 0 FOR 250.0;
-			LEVEL 1 FOR 250.0;
+			REPEAT = 3;
+			LEVEL 0 FOR 150.0;
+			LEVEL 1 FOR 150.0;
 		}
-		LEVEL 0 FOR 250.0;
-		LEVEL 1 FOR 249.9;
+		LEVEL 0 FOR 98.0;
 	}
 }
 
 TRANSITION_LIST("MasterCLEAR")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("JUMP_UC")
 {
 	NODE
 	{
@@ -757,7 +767,21 @@ TRANSITION_LIST("ULA0")
 	}
 }
 
-TRANSITION_LIST("ULA1")
+TRANSITION_LIST("CLK_in")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 1000;
+			LEVEL 0 FOR 0.5;
+			LEVEL 1 FOR 0.5;
+		}
+	}
+}
+
+TRANSITION_LIST("CLEARD")
 {
 	NODE
 	{
@@ -766,7 +790,7 @@ TRANSITION_LIST("ULA1")
 	}
 }
 
-TRANSITION_LIST("JUMP_UC")
+TRANSITION_LIST("ULA1")
 {
 	NODE
 	{
@@ -797,7 +821,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "contador";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 2;
 	TREE_LEVEL = 0;
 	CHILDREN = 3, 4, 5, 6, 7, 8, 9, 10;
@@ -807,7 +831,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "contador[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 3;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -817,7 +841,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "contador[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 4;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -827,7 +851,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "contador[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 5;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -837,7 +861,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "contador[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -847,7 +871,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "contador[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -857,7 +881,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "contador[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -867,7 +891,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "contador[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -877,7 +901,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "contador[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 10;
 	TREE_LEVEL = 1;
 	PARENT = 2;
@@ -887,7 +911,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 11;
 	TREE_LEVEL = 0;
 	CHILDREN = 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27;
@@ -897,7 +921,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[15]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 12;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -907,7 +931,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[14]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 13;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -917,7 +941,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[13]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 14;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -927,7 +951,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[12]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 15;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -937,7 +961,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[11]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 16;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -947,7 +971,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[10]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 17;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -957,7 +981,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[9]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 18;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -967,7 +991,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[8]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 19;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -977,7 +1001,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 20;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -987,7 +1011,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 21;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -997,7 +1021,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 22;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -1007,7 +1031,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 23;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -1017,7 +1041,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 24;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -1027,7 +1051,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 25;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -1037,7 +1061,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 26;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -1047,7 +1071,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "MEM[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 27;
 	TREE_LEVEL = 1;
 	PARENT = 11;
@@ -1055,7 +1079,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "JUMP_UC";
+	CHANNEL = "CLEARD";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 28;
@@ -1064,7 +1088,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "MasterCLEAR";
+	CHANNEL = "JUMP_UC";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 29;
@@ -1073,12 +1097,21 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "RgIN";
+	CHANNEL = "MasterCLEAR";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 30;
 	TREE_LEVEL = 0;
-	CHILDREN = 31, 32;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "RgIN";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 31;
+	TREE_LEVEL = 0;
+	CHILDREN = 32, 33;
 }
 
 DISPLAY_LINE
@@ -1086,9 +1119,9 @@ DISPLAY_LINE
 	CHANNEL = "RgIN[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 31;
+	TREE_INDEX = 32;
 	TREE_LEVEL = 1;
-	PARENT = 30;
+	PARENT = 31;
 }
 
 DISPLAY_LINE
@@ -1096,9 +1129,9 @@ DISPLAY_LINE
 	CHANNEL = "RgIN[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 32;
+	TREE_INDEX = 33;
 	TREE_LEVEL = 1;
-	PARENT = 30;
+	PARENT = 31;
 }
 
 DISPLAY_LINE
@@ -1106,9 +1139,9 @@ DISPLAY_LINE
 	CHANNEL = "RgTO";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 33;
+	TREE_INDEX = 34;
 	TREE_LEVEL = 0;
-	CHILDREN = 34, 35;
+	CHILDREN = 35, 36;
 }
 
 DISPLAY_LINE
@@ -1116,9 +1149,9 @@ DISPLAY_LINE
 	CHANNEL = "RgTO[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 34;
+	TREE_INDEX = 35;
 	TREE_LEVEL = 1;
-	PARENT = 33;
+	PARENT = 34;
 }
 
 DISPLAY_LINE
@@ -1126,9 +1159,9 @@ DISPLAY_LINE
 	CHANNEL = "RgTO[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 35;
+	TREE_INDEX = 36;
 	TREE_LEVEL = 1;
-	PARENT = 33;
+	PARENT = 34;
 }
 
 DISPLAY_LINE
@@ -1136,7 +1169,7 @@ DISPLAY_LINE
 	CHANNEL = "ULA0";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 36;
+	TREE_INDEX = 37;
 	TREE_LEVEL = 0;
 }
 
@@ -1145,7 +1178,7 @@ DISPLAY_LINE
 	CHANNEL = "ULA1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 37;
+	TREE_INDEX = 38;
 	TREE_LEVEL = 0;
 }
 

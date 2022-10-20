@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY CPU
+set_global_assignment -name TOP_LEVEL_ENTITY Count8
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:47:41  SEPTEMBER 13, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
@@ -53,16 +53,8 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name BDF_FILE Reg4.bdf
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name BDF_FILE CPU.bdf
-set_global_assignment -name BDF_FILE Count8.bdf
-set_global_assignment -name BDF_FILE Reg16.bdf
-set_global_assignment -name BDF_FILE ULA.bdf
-set_global_assignment -name BDF_FILE mem256x16.bdf
-set_global_assignment -name QIP_FILE rom01.qip
-set_global_assignment -name BDF_FILE display.bdf
 set_location_assignment PIN_Y2 -to CLK_in
 set_location_assignment PIN_AB23 -to input_key
 set_location_assignment PIN_AB28 -to A[0]
@@ -73,34 +65,7 @@ set_location_assignment PIN_AB27 -to A[4]
 set_location_assignment PIN_AC26 -to A[5]
 set_location_assignment PIN_AD26 -to A[6]
 set_location_assignment PIN_AB26 -to A[7]
-set_location_assignment PIN_G18 -to a11
-set_location_assignment PIN_M24 -to a21
-set_location_assignment PIN_AA25 -to a31
-set_location_assignment PIN_V21 -to a41
-set_location_assignment PIN_F22 -to b1
-set_location_assignment PIN_E17 -to c1
-set_location_assignment PIN_L26 -to d1
-set_location_assignment PIN_L25 -to e1
-set_location_assignment PIN_J22 -to f1
-set_location_assignment PIN_H22 -to g1
-set_location_assignment PIN_Y22 -to b2
-set_location_assignment PIN_W21 -to c2
-set_location_assignment PIN_W22 -to d2
-set_location_assignment PIN_W25 -to e2
-set_location_assignment PIN_U23 -to f2
-set_location_assignment PIN_U24 -to g2
-set_location_assignment PIN_AA26 -to b3
-set_location_assignment PIN_Y25 -to c3
-set_location_assignment PIN_W26 -to d3
-set_location_assignment PIN_Y26 -to e3
-set_location_assignment PIN_W27 -to f3
-set_location_assignment PIN_W28 -to g3
-set_location_assignment PIN_U21 -to b4
-set_location_assignment PIN_AB20 -to c4
-set_location_assignment PIN_AA21 -to d4
-set_location_assignment PIN_AD24 -to e4
-set_location_assignment PIN_AF23 -to f4
-set_location_assignment PIN_Y19 -to g4
+set_location_assignment PIN_AF23 -to g4
 set_location_assignment PIN_Y24 -to rst_deb
 set_location_assignment PIN_AA23 -to JUMP
 set_location_assignment PIN_AA22 -to MCLEAR
@@ -124,7 +89,6 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-set_global_assignment -name BDF_FILE COUNT_NO_DISPLAY.bdf
 set_location_assignment PIN_F19 -to b_out[1]
 set_location_assignment PIN_E19 -to b_out[2]
 set_location_assignment PIN_F21 -to b_out[3]
@@ -133,10 +97,50 @@ set_location_assignment PIN_E18 -to b_out[5]
 set_location_assignment PIN_J19 -to b_out[6]
 set_location_assignment PIN_H19 -to b_out[7]
 set_location_assignment PIN_G19 -to b_out[0]
+set_global_assignment -name BDF_FILE multiplex.bdf
+set_global_assignment -name BDF_FILE "ula-ula.bdf"
+set_global_assignment -name BDF_FILE Reg4.bdf
+set_global_assignment -name BDF_FILE CPU.bdf
+set_global_assignment -name BDF_FILE Count8.bdf
+set_global_assignment -name BDF_FILE Reg16.bdf
+set_global_assignment -name BDF_FILE ULA.bdf
+set_global_assignment -name BDF_FILE mem256x16.bdf
+set_global_assignment -name QIP_FILE rom01.qip
+set_global_assignment -name BDF_FILE display.bdf
 set_global_assignment -name BDF_FILE UC.bdf
 set_global_assignment -name BDF_FILE dmux1x4.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_location_assignment PIN_F22 -to display_out1[1]
+set_location_assignment PIN_E17 -to display_out1[2]
+set_location_assignment PIN_L26 -to display_out1[3]
+set_location_assignment PIN_L25 -to display_out1[4]
+set_location_assignment PIN_J22 -to display_out1[5]
+set_location_assignment PIN_H22 -to display_out1[6]
+set_location_assignment PIN_M24 -to display_out2[0]
+set_location_assignment PIN_Y22 -to display_out2[1]
+set_location_assignment PIN_W21 -to display_out2[2]
+set_location_assignment PIN_W22 -to display_out2[3]
+set_location_assignment PIN_W25 -to display_out2[4]
+set_location_assignment PIN_U23 -to display_out2[5]
+set_location_assignment PIN_U24 -to display_out2[6]
+set_location_assignment PIN_AA25 -to display_out3[0]
+set_location_assignment PIN_AA26 -to display_out3[1]
+set_location_assignment PIN_Y25 -to display_out3[2]
+set_location_assignment PIN_W26 -to display_out3[3]
+set_location_assignment PIN_Y26 -to display_out3[4]
+set_location_assignment PIN_W27 -to display_out3[5]
+set_location_assignment PIN_W28 -to display_out3[6]
+set_location_assignment PIN_V21 -to display_out4[0]
+set_location_assignment PIN_U21 -to display_out4[1]
+set_location_assignment PIN_AB20 -to display_out4[2]
+set_location_assignment PIN_AA21 -to display_out4[3]
+set_location_assignment PIN_AD24 -to display_out4[4]
+set_location_assignment PIN_AF23 -to display_out4[5]
+set_location_assignment PIN_Y19 -to display_out4[6]
+set_location_assignment PIN_G18 -to display_out1[0]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf

@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/thierryara/Documentos/USP/CPU/simulation/qsim
 Ecount8
-Z1 w1665714147
+Z1 w1666231464
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 JX^YokbeM8:bL?Pj@;1Jd1
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Lf2433zWNi5^RHNT=BHD60
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -18,23 +18,23 @@ Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z9 DPx6 altera 28 altera_primitives_components 0 22 PoC3B_7fao?IDTS[NR5Q62
-Z10 d/home/thierryara/Documentos/USP/CPU_1/simulation/qsim
-Z11 8CPU.vho
-Z12 FCPU.vho
+R0
+Z10 8CPU.vho
+Z11 FCPU.vho
 l0
 L80
 V>k2Ud2U[?=mC=H[BdiJIM2
 !s100 X0HAQg2fDSEj[Gg15aAaN3
-Z13 OV;C;10.5b;63
+Z12 OV;C;10.5b;63
 32
-Z14 !s110 1665714148
+Z13 !s110 1666231465
 !i10b 1
-Z15 !s108 1665714148.000000
-Z16 !s90 -work|work|CPU.vho|
-Z17 !s107 CPU.vho|
+Z14 !s108 1666231465.000000
+Z15 !s90 -work|work|CPU.vho|
+Z16 !s107 CPU.vho|
 !i113 1
-Z18 o-work work
-Z19 tExplicit 1 CvgOpt 0
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -49,57 +49,57 @@ l193
 L108
 V=>KAKz:NLaIG9bhYY;dEW1
 !s100 YDb32dn30R5Z>?^n4HcK`0
-R13
+R12
 32
-R14
+R13
 !i10b 1
+R14
 R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Ecount8_vhd_vec_tst
-Z20 w1665714146
+Z19 w1666231462
 R7
 R8
-R10
-Z21 8Waveform2.vwf.vht
-Z22 FWaveform2.vwf.vht
+R0
+Z20 8Waveform2.vwf.vht
+Z21 FWaveform2.vwf.vht
 l0
 L32
 VIiIeo[YR5:e`WL65]^ZYB3
 !s100 CUS;:>Yf1D^m@WKVOC0hb3
-R13
+R12
 32
-Z23 !s110 1665714149
+R13
 !i10b 1
-R15
-Z24 !s90 -work|work|Waveform2.vwf.vht|
-Z25 !s107 Waveform2.vwf.vht|
+R14
+Z22 !s90 -work|work|Waveform2.vwf.vht|
+Z23 !s107 Waveform2.vwf.vht|
 !i113 1
+R17
 R18
-R19
 Acount8_arch
 R7
 R8
-DEx4 work 18 count8_vhd_vec_tst 0 22 IiIeo[YR5:e`WL65]^ZYB3
+Z24 DEx4 work 18 count8_vhd_vec_tst 0 22 IiIeo[YR5:e`WL65]^ZYB3
 l51
 L34
-VWenh>3;P_Igb@;Hf;7ncI0
-!s100 CWlQCz`EnZ?6HjRF71Gd=0
-R13
+VRS0SPE3HI`@X7ja1S3m9I3
+!s100 BHBiZLQX`Sb>1XMDgdEZA3
+R12
 32
-R23
+R13
 !i10b 1
-R15
-R24
-R25
+R14
+R22
+R23
 !i113 1
+R17
 R18
-R19
 Ecpu
-Z26 w1665714453
+Z25 w1666230448
 R2
 R3
 R4
@@ -108,23 +108,23 @@ R6
 R7
 R8
 R9
+R0
 R10
 R11
-R12
 l0
 L80
-Va9ohObHb1Sg6izDF6Xnj12
-!s100 1A8YCzYzi4YPOUi:;i>910
-R13
+VAm^^cP1RYXg2bX1<^i;>X1
+!s100 16jbFJ1^N0:j;UJYMSJYb1
+R12
 32
-Z27 !s110 1665714454
+!s110 1666230449
 !i10b 1
-Z28 !s108 1665714454.000000
+Z26 !s108 1666230449.000000
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Astructure
 R2
 R3
@@ -134,85 +134,85 @@ R6
 R7
 R8
 R9
-DEx4 work 3 cpu 0 22 a9ohObHb1Sg6izDF6Xnj12
-l251
-L134
-V0QB]>?Jg4BL;J6z>D<K5O1
-!s100 C`in3Z`gzP9n3GGZ>SZC83
-R13
+DEx4 work 3 cpu 0 22 Am^^cP1RYXg2bX1<^i;>X1
+l260
+L138
+VZ=oT?V_U0QJ4hYE=0ab0E1
+!s100 n^76oIbOK>IgKFdI5^Q8h3
+R12
 32
-R27
+Z27 !s110 1666230450
 !i10b 1
-R28
+R26
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Ecpu_vhd_vec_tst
-Z29 w1665714452
+Z28 w1666230447
 R7
 R8
-R10
-Z30 8Waveform.vwf.vht
-Z31 FWaveform.vwf.vht
+R0
+Z29 8Waveform.vwf.vht
+Z30 FWaveform.vwf.vht
 l0
 L32
 VWH5;nYiB6@7gZK<F=?2KH2
 !s100 MT_2[ECbSh>ONUcARUP8c0
-R13
+R12
 32
 R27
 !i10b 1
-R28
+Z31 !s108 1666230450.000000
 Z32 !s90 -work|work|Waveform.vwf.vht|
 Z33 !s107 Waveform.vwf.vht|
 !i113 1
+R17
 R18
-R19
 Acpu_arch
 R7
 R8
-Z34 DEx4 work 15 cpu_vhd_vec_tst 0 22 WH5;nYiB6@7gZK<F=?2KH2
-l63
+DEx4 work 15 cpu_vhd_vec_tst 0 22 WH5;nYiB6@7gZK<F=?2KH2
+l67
 L34
-VSILZcXiXVEYTN88mN133b1
-!s100 cF7DXHPR0:Uho<j_S78`[1
-R13
+V:>Y54`=do`V8L<1=Q^48[2
+!s100 h3V]KS:K;4Uf5O<68kgDF3
+R12
 32
 R27
 !i10b 1
-R28
+R31
 R32
 R33
 !i113 1
+R17
 R18
-R19
 Edmux1x4
-Z35 w1665707822
+Z34 w1665707822
 R4
 R2
 R6
 R7
 R8
 R3
+Z35 d/home/thierryara/Documentos/USP/CPU_1/simulation/qsim
 R10
 R11
-R12
 l0
 L78
 V_ZJI9SA[BojblVfkFCInR3
 !s100 8<m3_gZON0RWE90X;A6bS1
-R13
+R12
 32
 Z36 !s110 1665707823
 !i10b 1
 Z37 !s108 1665707823.000000
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Astructure
 R4
 R2
@@ -225,28 +225,28 @@ l136
 L100
 V[=X59hzOTLgNQL1L;GS7@0
 !s100 O0a7IjBFGca<Zm<I7^5P`1
-R13
+R12
 32
 R36
 !i10b 1
 R37
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Edmux1x4_vhd_vec_tst
 Z38 w1665707820
 R7
 R8
-R10
+R35
+R29
 R30
-R31
 l0
 L32
 Vl>M@mI@N9_6i3fZaJUoHE1
 !s100 [bEg`=e=Q@hY7SjR6cb2X3
-R13
+R12
 32
 R36
 !i10b 1
@@ -254,8 +254,8 @@ R37
 R32
 R33
 !i113 1
+R17
 R18
-R19
 Admux1x4_arch
 R7
 R8
@@ -264,7 +264,7 @@ l55
 L34
 V@Qnj=I2M8`<NJMVOcYF1n2
 !s100 IPM]`Y]VSg:ej<alBWkfA2
-R13
+R12
 32
 R36
 !i10b 1
@@ -272,33 +272,33 @@ R37
 R32
 R33
 !i113 1
+R17
 R18
-R19
 Ehard_block
-R26
+R1
 R4
 R2
 R6
 R7
 R8
 R3
+R0
 R10
 R11
-R12
 l0
 L35
 VB]0;STalBkCB1_B4BXQDW2
 !s100 >mXi5[`cD`bFC`UBKA<om3
-R13
+R12
 32
-R27
+R13
 !i10b 1
-R28
+R14
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Astructure
 R4
 R2
@@ -311,108 +311,104 @@ l65
 L51
 Via>5o7W??azG@W@@eFOTF0
 !s100 [5;Wd8QGQ>@2NGoJ1I]Y43
-R13
-32
-R27
-!i10b 1
-R28
-R16
-R17
-!i113 1
-R18
-R19
-Emem256x16
-Z39 w1665259670
-R2
-R3
-R4
-R5
-R6
-R7
-R8
-R9
-R0
-R11
 R12
-l0
-L80
-V19AZz^X`coGB2P5iZDiPg0
-!s100 =kiLjCEBVm<c7B?[[BB9g1
-R13
 32
-Z40 !s110 1665259671
+R13
 !i10b 1
-Z41 !s108 1665259671.000000
+R14
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
-Astructure
-R2
-R3
+Emem256x16
+Z39 w1666229757
 R4
-R5
+R2
 R6
 R7
 R8
-R9
-DEx4 work 9 mem256x16 0 22 19AZz^X`coGB2P5iZDiPg0
-l407
-L185
-Va;4Ab1L<n>G^;^lnba5Bm0
-!s100 :cBVTNcAB9gmD5<YB;QCg2
-R13
+R3
+R0
+R10
+R11
+l0
+L78
+V1L[lzoWfm?K::bQS0^>nO3
+!s100 XQ]l35d0N=38hWMCH@UIQ3
+R12
+32
+Z40 !s110 1666229759
+!i10b 1
+Z41 !s108 1666229759.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 9 mem256x16 0 22 1L[lzoWfm?K::bQS0^>nO3
+l285
+L146
+V29FW6O>]B3TOGC:C9YndK3
+!s100 9O8MlAY>jS4T=GCfmDPm[1
+R12
 32
 R40
 !i10b 1
 R41
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Emem256x16_vhd_vec_tst
-Z42 w1665259669
+Z42 w1666229755
 R7
 R8
 R0
-Z43 8Waveform4.vwf.vht
-Z44 FWaveform4.vwf.vht
+R29
+R30
 l0
 L32
 VP0_3MnkQ8A>h]AG3hkE_E0
 !s100 7l7ck=V1:ejSjR4VRW@:93
-R13
+R12
 32
 R40
 !i10b 1
 R41
-Z45 !s90 -work|work|Waveform4.vwf.vht|
-Z46 !s107 Waveform4.vwf.vht|
+R32
+R33
 !i113 1
+R17
 R18
-R19
 Amem256x16_arch
 R7
 R8
 DEx4 work 21 mem256x16_vhd_vec_tst 0 22 P0_3MnkQ8A>h]AG3hkE_E0
-l109
+l55
 L34
-Ve;X;CG1hdDehXjl2@0c^C0
-!s100 4AkR=g<l_`SE]M27L;LVW0
-R13
+VTT:JkWF@0RUS;lU8dZSAB2
+!s100 ^Yd<Oi]N2_4Xz5Fb0540G2
+R12
 32
 R40
 !i10b 1
 R41
-R45
-R46
+R32
+R33
 !i113 1
+R17
 R18
-R19
 Ereg4
-Z47 w1665698138
+Z43 w1665698138
 R2
 R3
 R4
@@ -421,23 +417,23 @@ R6
 R7
 R8
 R9
+R35
 R10
 R11
-R12
 l0
 L80
 Vb6EoN[jMEeA[WAkf23W]d1
 !s100 JF2T@I]_DN@XP_DO2][7?2
-R13
+R12
 32
-Z48 !s110 1665698142
+Z44 !s110 1665698142
 !i10b 1
-Z49 !s108 1665698142.000000
+Z45 !s108 1665698142.000000
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Astructure
 R2
 R3
@@ -452,37 +448,37 @@ l146
 L102
 Vn<0O5?g^EJJMX7IgNQW;f1
 !s100 U0Wm0;lE]@[N>MU<7?l543
-R13
+R12
 32
-R48
+R44
 !i10b 1
-R49
+R45
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Ereg4_vhd_vec_tst
-Z50 w1665698136
+Z46 w1665698136
 R7
 R8
-R10
+R35
+R29
 R30
-R31
 l0
 L32
 Vo0Z`hcYY?7^6iH2J;?zoD3
 !s100 QG<C5QgPjeDc2d@lRYM>=2
-R13
+R12
 32
-R48
+R44
 !i10b 1
-R49
+R45
 R32
 R33
 !i113 1
+R17
 R18
-R19
 Areg4_arch
 R7
 R8
@@ -491,18 +487,18 @@ l49
 L34
 VY3M9`8R5Q7Izn@dafW]n>3
 !s100 n6VKSR=E4beS6Q<`U5>fM3
-R13
+R12
 32
-R48
+R44
 !i10b 1
-R49
+R45
 R32
 R33
 !i113 1
+R17
 R18
-R19
 Erom01
-Z51 w1665256982
+Z47 w1665256982
 R4
 R2
 R6
@@ -510,22 +506,22 @@ R7
 R8
 R3
 R0
+R10
 R11
-R12
 l0
 L78
 VXQdAUzmicgH9TX:`RbUYX2
 !s100 3kGY=8WT3^JzTn;Oncdbd3
-R13
+R12
 32
-Z52 !s110 1665256982
+Z48 !s110 1665256982
 !i10b 1
-Z53 !s108 1665256982.000000
+Z49 !s108 1665256982.000000
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Astructure
 R4
 R2
@@ -538,37 +534,37 @@ l165
 L114
 V2cKAeV`bD>dDKiP;O^AGP1
 !s100 fm<54maiSgVmTS[HE>Cb<2
-R13
+R12
 32
-R52
+R48
 !i10b 1
-R53
+R49
+R15
 R16
-R17
 !i113 1
+R17
 R18
-R19
 Erom01_vhd_vec_tst
-Z54 w1665256980
+Z50 w1665256980
 R7
 R8
 R0
-Z55 8Waveform3.vwf.vht
-Z56 FWaveform3.vwf.vht
+Z51 8Waveform3.vwf.vht
+Z52 FWaveform3.vwf.vht
 l0
 L32
 VC=TGcCeCK2ZlCmWYhh?aA3
 !s100 jiYg?cd78Ecfg<f5PB6<13
-R13
+R12
 32
-Z57 !s110 1665256983
+Z53 !s110 1665256983
 !i10b 1
-Z58 !s108 1665256983.000000
-Z59 !s90 -work|work|Waveform3.vwf.vht|
-Z60 !s107 Waveform3.vwf.vht|
+Z54 !s108 1665256983.000000
+Z55 !s90 -work|work|Waveform3.vwf.vht|
+Z56 !s107 Waveform3.vwf.vht|
 !i113 1
+R17
 R18
-R19
 Arom01_arch
 R7
 R8
@@ -577,13 +573,13 @@ l47
 L34
 VooDP6zBm==cl<U4897@8R1
 !s100 9]Hb<`hDzjlRk6OSV1Cn31
-R13
+R12
 32
-R57
+R53
 !i10b 1
-R58
-R59
-R60
+R54
+R55
+R56
 !i113 1
+R17
 R18
-R19

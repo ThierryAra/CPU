@@ -1,11 +1,11 @@
 onerror {exit -code 1}
 vlib work
 vcom -work work CPU.vho
-vcom -work work Waveform.vwf.vht
-vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.CPU_vhd_vec_tst
+vcom -work work Waveform2.vwf.vht
+vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Count8_vhd_vec_tst
 vcd file -direction CPU.msim.vcd
-vcd add -internal CPU_vhd_vec_tst/*
-vcd add -internal CPU_vhd_vec_tst/i1/*
+vcd add -internal Count8_vhd_vec_tst/*
+vcd add -internal Count8_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {

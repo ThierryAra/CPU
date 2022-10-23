@@ -244,98 +244,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "display_ula[6]",
-					"strict" : false
-				},
-				{
-					"name" : "display_ula[5]",
-					"strict" : false
-				},
-				{
-					"name" : "display_ula[4]",
-					"strict" : false
-				},
-				{
-					"name" : "display_ula[3]",
-					"strict" : false
-				},
-				{
-					"name" : "display_ula[2]",
-					"strict" : false
-				},
-				{
-					"name" : "display_ula[1]",
-					"strict" : false
-				},
-				{
-					"name" : "display_ula[0]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[15]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[14]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[13]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[12]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[11]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[10]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[9]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[8]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[7]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[6]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[5]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[4]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[3]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[2]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[1]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM[0]",
-					"strict" : false
-				},
-				{
 					"name" : "REG_1[3]",
 					"strict" : false
 				},
@@ -384,34 +292,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "saida_mux[6]",
-					"strict" : false
-				},
-				{
-					"name" : "saida_mux[5]",
-					"strict" : false
-				},
-				{
-					"name" : "saida_mux[4]",
-					"strict" : false
-				},
-				{
-					"name" : "saida_mux[3]",
-					"strict" : false
-				},
-				{
-					"name" : "saida_mux[2]",
-					"strict" : false
-				},
-				{
-					"name" : "saida_mux[1]",
-					"strict" : false
-				},
-				{
-					"name" : "saida_mux[0]",
-					"strict" : false
-				},
-				{
 					"name" : "SAIDA_ULA[3]",
 					"strict" : false
 				},
@@ -429,6 +309,14 @@
 				},
 				{
 					"name" : "MCLEAR",
+					"strict" : false
+				},
+				{
+					"name" : "rst_deb",
+					"strict" : false
+				},
+				{
+					"name" : "input_key",
 					"strict" : false
 				},
 				{

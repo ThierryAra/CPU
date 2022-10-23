@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Fri Oct 21 17:56:02 2022
+Sat Oct 22 23:20:52 2022
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -16,14 +16,18 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. General Register Statistics
- 11. Source assignments for mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_nnr3:auto_generated
- 12. Parameter Settings for User Entity Instance: mem256x16:inst|rom01:inst|altsyncram:altsyncram_component
- 13. Parameter Settings for User Entity Instance: ULA:inst2|mux41:inst5|lpm_mux:LPM_MUX_component
- 14. Parameter Settings for User Entity Instance: mux41:inst5|lpm_mux:LPM_MUX_component
- 15. altsyncram Parameter Settings by Entity Instance
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated
+ 13. Parameter Settings for User Entity Instance: mem256x16:inst|rom01:inst|altsyncram:altsyncram_component
+ 14. Parameter Settings for User Entity Instance: debouncer:inst9
+ 15. Parameter Settings for User Entity Instance: ULA:inst2|mux41:inst5|lpm_mux:LPM_MUX_component
+ 16. Parameter Settings for User Entity Instance: mux41:inst5|lpm_mux:LPM_MUX_component
+ 17. Parameter Settings for User Entity Instance: LPM_CONSTANT:inst22
+ 18. Parameter Settings for User Entity Instance: LPM_CONSTANT:inst24
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -50,16 +54,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 21 17:56:02 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 22 23:20:52 2022       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; CPU                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 129                                         ;
-;     Total combinational functions  ; 125                                         ;
-;     Dedicated logic registers      ; 18                                          ;
-; Total registers                    ; 18                                          ;
-; Total pins                         ; 108                                         ;
+; Total logic elements               ; 143                                         ;
+;     Total combinational functions  ; 136                                         ;
+;     Dedicated logic registers      ; 37                                          ;
+; Total registers                    ; 37                                          ;
+; Total pins                         ; 94                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -194,8 +198,9 @@ https://fpgasoftware.intel.com/eula.
 ; altrom.inc                       ; yes             ; Megafunction                             ; /home/thierryara/intelFPGA/19.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                             ; /home/thierryara/intelFPGA/19.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                             ; /home/thierryara/intelFPGA/19.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_nnr3.tdf           ; yes             ; Auto-Generated Megafunction              ; /home/thierryara/Documentos/USP/CPU/db/altsyncram_nnr3.tdf                            ;         ;
-; Mem01.mif                        ; yes             ; Auto-Found Memory Initialization File    ; /home/thierryara/Documentos/USP/CPU/Mem01.mif                                         ;         ;
+; db/altsyncram_3sr3.tdf           ; yes             ; Auto-Generated Megafunction              ; /home/thierryara/Documentos/USP/CPU/db/altsyncram_3sr3.tdf                            ;         ;
+; ../Mem02.mif                     ; yes             ; Auto-Found Memory Initialization File    ; /home/thierryara/Documentos/USP/CPU/Mem02.mif                                         ;         ;
+; debouncer.v                      ; yes             ; Auto-Found Verilog HDL File              ; /home/thierryara/Documentos/USP/CPU/debouncer.v                                       ;         ;
 ; mux41.v                          ; yes             ; Auto-Found Wizard-Generated File         ; /home/thierryara/Documentos/USP/CPU/mux41.v                                           ;         ;
 ; lpm_mux.tdf                      ; yes             ; Megafunction                             ; /home/thierryara/intelFPGA/19.1/quartus/libraries/megafunctions/lpm_mux.tdf           ;         ;
 ; muxlut.inc                       ; yes             ; Megafunction                             ; /home/thierryara/intelFPGA/19.1/quartus/libraries/megafunctions/muxlut.inc            ;         ;
@@ -209,40 +214,41 @@ https://fpgasoftware.intel.com/eula.
 ; subtratorb-a.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; /home/thierryara/Documentos/USP/CPU/subtratorb-a.bdf                                  ;         ;
 ; divisao.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; /home/thierryara/Documentos/USP/CPU/divisao.bdf                                       ;         ;
 ; divisor.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; /home/thierryara/Documentos/USP/CPU/divisor.bdf                                       ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                             ; /home/thierryara/intelFPGA/19.1/quartus/libraries/megafunctions/lpm_constant.tdf      ;         ;
 +----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 129          ;
-;                                             ;              ;
-; Total combinational functions               ; 125          ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 93           ;
-;     -- 3 input functions                    ; 16           ;
-;     -- <=2 input functions                  ; 16           ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 125          ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 18           ;
-;     -- Dedicated logic registers            ; 18           ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 108          ;
-; Total memory bits                           ; 4096         ;
-;                                             ;              ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; CLK_in~input ;
-; Maximum fan-out                             ; 37           ;
-; Total fan-out                               ; 858          ;
-; Average fan-out                             ; 2.29         ;
-+---------------------------------------------+--------------+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimated Total logic elements              ; 143                       ;
+;                                             ;                           ;
+; Total combinational functions               ; 136                       ;
+; Logic element usage by number of LUT inputs ;                           ;
+;     -- 4 input functions                    ; 87                        ;
+;     -- 3 input functions                    ; 19                        ;
+;     -- <=2 input functions                  ; 30                        ;
+;                                             ;                           ;
+; Logic elements by mode                      ;                           ;
+;     -- normal mode                          ; 121                       ;
+;     -- arithmetic mode                      ; 15                        ;
+;                                             ;                           ;
+; Total registers                             ; 37                        ;
+;     -- Dedicated logic registers            ; 37                        ;
+;     -- I/O registers                        ; 0                         ;
+;                                             ;                           ;
+; I/O pins                                    ; 94                        ;
+; Total memory bits                           ; 4096                      ;
+;                                             ;                           ;
+; Embedded Multiplier 9-bit elements          ; 0                         ;
+;                                             ;                           ;
+; Maximum fan-out node                        ; debouncer:inst9|out_key~2 ;
+; Maximum fan-out                             ; 39                        ;
+; Total fan-out                               ; 919                       ;
+; Average fan-out                             ; 2.44                      ;
++---------------------------------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -250,25 +256,25 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+-----------------+--------------+
-; |CPU                                         ; 125 (4)             ; 18 (2)                    ; 4096        ; 0            ; 0       ; 0         ; 108  ; 0            ; |CPU                                                                                          ; CPU             ; work         ;
-;    |Count8:inst10|                           ; 33 (33)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Count8:inst10                                                                            ; Count8          ; work         ;
-;    |Reg4:inst101|                            ; 2 (2)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Reg4:inst101                                                                             ; Reg4            ; work         ;
-;    |Reg4:inst102|                            ; 2 (2)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Reg4:inst102                                                                             ; Reg4            ; work         ;
+; |CPU                                         ; 136 (4)             ; 37 (3)                    ; 4096        ; 0            ; 0       ; 0         ; 94   ; 0            ; |CPU                                                                                          ; CPU             ; work         ;
+;    |Count8:inst10|                           ; 32 (32)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Count8:inst10                                                                            ; Count8          ; work         ;
+;    |Reg4:inst101|                            ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Reg4:inst101                                                                             ; Reg4            ; work         ;
+;    |Reg4:inst102|                            ; 0 (0)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Reg4:inst102                                                                             ; Reg4            ; work         ;
 ;    |UC:inst14|                               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|UC:inst14                                                                                ; UC              ; work         ;
 ;    |ULA:inst2|                               ; 19 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2                                                                                ; ULA             ; work         ;
 ;       |mux41:inst5|                          ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|mux41:inst5                                                                    ; mux41           ; work         ;
 ;          |lpm_mux:LPM_MUX_component|         ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|mux41:inst5|lpm_mux:LPM_MUX_component                                          ; lpm_mux         ; work         ;
 ;             |mux_drc:auto_generated|         ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|mux41:inst5|lpm_mux:LPM_MUX_component|mux_drc:auto_generated                   ; mux_drc         ; work         ;
-;       |soma:inst|                            ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|soma:inst                                                                      ; soma            ; work         ;
+;       |soma:inst|                            ; 2 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|soma:inst                                                                      ; soma            ; work         ;
 ;          |somador:inst2|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|soma:inst|somador:inst2                                                        ; somador         ; work         ;
-;          |somador:inst3|                     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|soma:inst|somador:inst3                                                        ; somador         ; work         ;
-;       |subtracao:inst2|                      ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|subtracao:inst2                                                                ; subtracao       ; work         ;
+;          |somador:inst3|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|soma:inst|somador:inst3                                                        ; somador         ; work         ;
+;       |subtracao:inst2|                      ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|subtracao:inst2                                                                ; subtracao       ; work         ;
 ;          |subtratorb-a:inst1|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|subtracao:inst2|subtratorb-a:inst1                                             ; subtratorb-a    ; work         ;
+;          |subtratorb-a:inst2|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|subtracao:inst2|subtratorb-a:inst2                                             ; subtratorb-a    ; work         ;
 ;          |subtratorb-a:inst3|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ULA:inst2|subtracao:inst2|subtratorb-a:inst3                                             ; subtratorb-a    ; work         ;
+;    |debouncer:inst9|                         ; 28 (28)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|debouncer:inst9                                                                          ; debouncer       ; work         ;
 ;    |display:inst114|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|display:inst114                                                                          ; display         ; work         ;
 ;    |display:inst115|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|display:inst115                                                                          ; display         ; work         ;
-;    |display:inst6|                           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|display:inst6                                                                            ; display         ; work         ;
-;    |display:inst85|                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|display:inst85                                                                           ; display         ; work         ;
 ;    |mem256x16:inst|                          ; 31 (0)              ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mem256x16:inst                                                                           ; mem256x16       ; work         ;
 ;       |display:inst1|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mem256x16:inst|display:inst1                                                             ; display         ; work         ;
 ;       |display:inst2|                        ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mem256x16:inst|display:inst2                                                             ; display         ; work         ;
@@ -276,21 +282,21 @@ https://fpgasoftware.intel.com/eula.
 ;       |display:inst4|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mem256x16:inst|display:inst4                                                             ; display         ; work         ;
 ;       |rom01:inst|                           ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mem256x16:inst|rom01:inst                                                                ; rom01           ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mem256x16:inst|rom01:inst|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;             |altsyncram_nnr3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_nnr3:auto_generated ; altsyncram_nnr3 ; work         ;
-;    |mux41:inst5|                             ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mux41:inst5                                                                              ; mux41           ; work         ;
-;       |lpm_mux:LPM_MUX_component|            ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mux41:inst5|lpm_mux:LPM_MUX_component                                                    ; lpm_mux         ; work         ;
-;          |mux_drc:auto_generated|            ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mux41:inst5|lpm_mux:LPM_MUX_component|mux_drc:auto_generated                             ; mux_drc         ; work         ;
+;             |altsyncram_3sr3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated ; altsyncram_3sr3 ; work         ;
+;    |mux41:inst5|                             ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mux41:inst5                                                                              ; mux41           ; work         ;
+;       |lpm_mux:LPM_MUX_component|            ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mux41:inst5|lpm_mux:LPM_MUX_component                                                    ; lpm_mux         ; work         ;
+;          |mux_drc:auto_generated|            ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|mux41:inst5|lpm_mux:LPM_MUX_component|mux_drc:auto_generated                             ; mux_drc         ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                 ;
-+-----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------+
-; Name                                                                                                ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF       ;
-+-----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------+
-; mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_nnr3:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 16           ; --           ; --           ; 4096 ; Mem01.mif ;
-+-----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-----------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                    ;
++-----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------+
+; Name                                                                                                ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF          ;
++-----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------+
+; mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 16           ; --           ; --           ; 4096 ; ../Mem02.mif ;
++-----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -307,18 +313,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 18    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 37    ;
+; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 18    ;
+; Number of registers using Asynchronous Clear ; 37    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|debouncer:inst9|counter[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------+
-; Source assignments for mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_nnr3:auto_generated ;
+; Source assignments for mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                ;
 +---------------------------------+--------------------+------+---------------------------------------------------+
@@ -369,7 +384,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                    ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                    ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                    ;
-; INIT_FILE                          ; Mem01.mif            ; Untyped                                    ;
+; INIT_FILE                          ; ../Mem02.mif         ; Untyped                                    ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                    ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                             ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                    ;
@@ -382,8 +397,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                    ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                             ;
 ; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                    ;
-; CBXI_PARAMETER                     ; altsyncram_nnr3      ; Untyped                                    ;
+; CBXI_PARAMETER                     ; altsyncram_3sr3      ; Untyped                                    ;
 +------------------------------------+----------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debouncer:inst9 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; DELAY_BITS     ; 16    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -425,6 +450,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_CONSTANT:inst22 ;
++--------------------+------------------+--------------------------+
+; Parameter Name     ; Value            ; Type                     ;
++--------------------+------------------+--------------------------+
+; LPM_WIDTH          ; 4                ; Untyped                  ;
+; LPM_CVALUE         ; 0                ; Untyped                  ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                  ;
+; CBXI_PARAMETER     ; lpm_constant_v64 ; Untyped                  ;
++--------------------+------------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_CONSTANT:inst24 ;
++--------------------+------------------+--------------------------+
+; Parameter Name     ; Value            ; Type                     ;
++--------------------+------------------+--------------------------+
+; LPM_WIDTH          ; 4                ; Untyped                  ;
+; LPM_CVALUE         ; 0                ; Untyped                  ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                  ;
+; CBXI_PARAMETER     ; lpm_constant_v64 ; Untyped                  ;
++--------------------+------------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                      ;
 +-------------------------------------------+-----------------------------------------------------------+
@@ -450,19 +501,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 108                         ;
-; cycloneiii_ff         ; 18                          ;
-;     CLR               ; 18                          ;
-; cycloneiii_lcell_comb ; 185                         ;
-;     normal            ; 185                         ;
-;         1 data inputs ; 64                          ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 93                          ;
+; boundary_port         ; 94                          ;
+; cycloneiii_ff         ; 37                          ;
+;     CLR               ; 21                          ;
+;     ENA CLR SCLR      ; 16                          ;
+; cycloneiii_lcell_comb ; 181                         ;
+;     arith             ; 15                          ;
+;         2 data inputs ; 15                          ;
+;     normal            ; 166                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 44                          ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 87                          ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.66                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.01                        ;
 +-----------------------+-----------------------------+
 
 
@@ -481,7 +536,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Fri Oct 21 17:55:44 2022
+    Info: Processing started: Sat Oct 22 23:20:34 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -517,9 +572,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file dmux4bi
 Info (12021): Found 1 design units, including 1 entities, in source file testando_dmux.bdf
     Info (12023): Found entity 1: testando_dmux
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
-Warning (275008): Primitive "OR2" of instance "inst15" not used
 Info (12128): Elaborating entity "UC" for hierarchy "UC:inst14"
-Warning (275008): Primitive "OR2" of instance "inst2" not used
 Info (12128): Elaborating entity "dmux1x4" for hierarchy "UC:inst14|dmux1x4:inst3"
 Info (12128): Elaborating entity "mem256x16" for hierarchy "mem256x16:inst"
 Info (12128): Elaborating entity "rom01" for hierarchy "mem256x16:inst|rom01:inst"
@@ -546,7 +599,7 @@ Info (12133): Instantiated megafunction "mem256x16:inst|rom01:inst|altsyncram:al
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "Mem01.mif"
+    Info (12134): Parameter "init_file" = "../Mem02.mif"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "256"
@@ -576,10 +629,14 @@ Info (12133): Instantiated megafunction "mem256x16:inst|rom01:inst|altsyncram:al
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nnr3.tdf
-    Info (12023): Found entity 1: altsyncram_nnr3 File: /home/thierryara/Documentos/USP/CPU/db/altsyncram_nnr3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_nnr3" for hierarchy "mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_nnr3:auto_generated" File: /home/thierryara/intelFPGA/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3sr3.tdf
+    Info (12023): Found entity 1: altsyncram_3sr3 File: /home/thierryara/Documentos/USP/CPU/db/altsyncram_3sr3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_3sr3" for hierarchy "mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated" File: /home/thierryara/intelFPGA/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "display" for hierarchy "mem256x16:inst|display:inst4"
+Warning (12125): Using design file debouncer.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: debouncer File: /home/thierryara/Documentos/USP/CPU/debouncer.v Line: 28
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:inst9"
+Warning (10230): Verilog HDL assignment warning at debouncer.v(71): truncated value with size 32 to match size of target (16) File: /home/thierryara/Documentos/USP/CPU/debouncer.v Line: 71
 Info (12128): Elaborating entity "Count8" for hierarchy "Count8:inst10"
 Info (12128): Elaborating entity "Reg4" for hierarchy "Reg4:inst101"
 Info (12128): Elaborating entity "ULA" for hierarchy "ULA:inst2"
@@ -618,23 +675,45 @@ Info (12128): Elaborating entity "divisao" for hierarchy "ULA:inst2|divisao:inst
 Warning (12125): Using design file divisor.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: divisor
 Info (12128): Elaborating entity "divisor" for hierarchy "ULA:inst2|divisao:inst4|divisor:inst54"
+Info (12128): Elaborating entity "LPM_CONSTANT" for hierarchy "LPM_CONSTANT:inst22"
+Info (12130): Elaborated megafunction instantiation "LPM_CONSTANT:inst22"
+Info (12133): Instantiated megafunction "LPM_CONSTANT:inst22" with the following parameter:
+    Info (12134): Parameter "LPM_CVALUE" = "0"
+    Info (12134): Parameter "LPM_WIDTH" = "4"
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "Count8:inst10|inst11" is converted into an equivalent circuit using register "Count8:inst10|inst11~_emulated" and latch "Count8:inst10|inst11~1"
     Warning (13310): Register "Count8:inst10|inst10" is converted into an equivalent circuit using register "Count8:inst10|inst10~_emulated" and latch "Count8:inst10|inst10~1"
     Warning (13310): Register "Count8:inst10|inst9" is converted into an equivalent circuit using register "Count8:inst10|inst9~_emulated" and latch "Count8:inst10|inst9~1"
     Warning (13310): Register "Count8:inst10|inst47" is converted into an equivalent circuit using register "Count8:inst10|inst47~_emulated" and latch "Count8:inst10|inst47~1"
+    Warning (13310): Register "debouncer:inst9|out_key" is converted into an equivalent circuit using register "debouncer:inst9|out_key~_emulated" and latch "debouncer:inst9|out_key~1" File: /home/thierryara/Documentos/USP/CPU/debouncer.v Line: 42
+    Warning (13310): Register "debouncer:inst9|intermediate" is converted into an equivalent circuit using register "debouncer:inst9|intermediate~_emulated" and latch "debouncer:inst9|out_key~1" File: /home/thierryara/Documentos/USP/CPU/debouncer.v Line: 50
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "saida_display_0_1[6]" is stuck at VCC
+    Warning (13410): Pin "saida_display_0_1[5]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_1[4]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_1[3]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_1[2]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_1[1]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_1[0]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_2[6]" is stuck at VCC
+    Warning (13410): Pin "saida_display_0_2[5]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_2[4]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_2[3]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_2[2]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_2[1]" is stuck at GND
+    Warning (13410): Pin "saida_display_0_2[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 255 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 106 output pins
-    Info (21061): Implemented 131 logic cells
+Info (21057): Implemented 257 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 90 output pins
+    Info (21061): Implemented 147 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 1022 megabytes
-    Info: Processing ended: Fri Oct 21 17:56:02 2022
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:31
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 1028 megabytes
+    Info: Processing ended: Sat Oct 22 23:20:53 2022
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:32
 
 

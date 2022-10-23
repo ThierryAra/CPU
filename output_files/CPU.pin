@@ -106,19 +106,19 @@ RESERVED_INPUT               : AA8       :        :                   :         
 GNDA1                        : AA9       : gnd    :                   :         :           :                
 RESERVED_INPUT               : AA10      :        :                   :         : 3         :                
 VCCIO3                       : AA11      : power  :                   : 2.5V    : 3         :                
-ULAop[1]                     : AA12      : output : 2.5 V             :         : 3         : N              
-RegEscolhido[0]              : AA13      : output : 2.5 V             :         : 3         : N              
-SAIDA_ULA[1]                 : AA14      : output : 2.5 V             :         : 3         : N              
-display_reg1[5]              : AA15      : output : 2.5 V             :         : 4         : Y              
-display_reg1[2]              : AA16      : output : 2.5 V             :         : 4         : Y              
-display_reg1[0]              : AA17      : output : 2.5 V             :         : 4         : Y              
+RESERVED_INPUT               : AA12      :        :                   :         : 3         :                
+RESERVED_INPUT               : AA13      :        :                   :         : 3         :                
+display_reg1[6]              : AA14      : output : 2.5 V             :         : 3         : Y              
+display_reg2[5]              : AA15      : output : 2.5 V             :         : 4         : Y              
+display_reg2[2]              : AA16      : output : 2.5 V             :         : 4         : Y              
+display_reg2[0]              : AA17      : output : 2.5 V             :         : 4         : Y              
 VCCIO4                       : AA18      : power  :                   : 2.5V    : 4         :                
-RESERVED_INPUT               : AA19      :        :                   :         : 4         :                
+saida_display_0_1[1]         : AA19      : output : 2.5 V             :         : 4         : Y              
 GNDA4                        : AA20      : gnd    :                   :         :           :                
 display_out4[3]              : AA21      : output : 2.5 V             :         : 4         : Y              
 MCLEAR                       : AA22      : input  : 2.5 V             :         : 5         : Y              
-RESERVED_INPUT               : AA23      :        :                   :         : 5         :                
-RESERVED_INPUT               : AA24      :        :                   :         : 5         :                
+RegEscolhido[2]              : AA23      : output : 2.5 V             :         : 5         : N              
+RegEscolhido[3]              : AA24      : output : 2.5 V             :         : 5         : N              
 display_out3[0]              : AA25      : output : 2.5 V             :         : 5         : Y              
 display_out3[1]              : AA26      : output : 2.5 V             :         : 5         : Y              
 GND                          : AA27      : gnd    :                   :         :           :                
@@ -132,25 +132,25 @@ RESERVED_INPUT               : AB6       :        :                   :         
 RESERVED_INPUT               : AB7       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB8       :        :                   :         : 3         :                
 RESERVED_INPUT               : AB9       :        :                   :         : 3         :                
-RgTO[1]                      : AB10      : output : 2.5 V             :         : 3         : N              
-MEM[9]                       : AB11      : output : 2.5 V             :         : 3         : N              
-saida_mux[0]                 : AB12      : output : 2.5 V             :         : 3         : N              
-saida_mux[1]                 : AB13      : output : 2.5 V             :         : 3         : N              
-RegEscolhido[1]              : AB14      : output : 2.5 V             :         : 3         : N              
-display_reg1[4]              : AB15      : output : 2.5 V             :         : 4         : Y              
-display_reg1[1]              : AB16      : output : 2.5 V             :         : 4         : Y              
-display_reg1[3]              : AB17      : output : 2.5 V             :         : 4         : Y              
-display_reg2[2]              : AB18      : output : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT               : AB19      :        :                   :         : 4         :                
+RESERVED_INPUT               : AB10      :        :                   :         : 3         :                
+RESERVED_INPUT               : AB11      :        :                   :         : 3         :                
+RESERVED_INPUT               : AB12      :        :                   :         : 3         :                
+RESERVED_INPUT               : AB13      :        :                   :         : 3         :                
+RESERVED_INPUT               : AB14      :        :                   :         : 3         :                
+display_reg2[4]              : AB15      : output : 2.5 V             :         : 4         : Y              
+display_reg2[1]              : AB16      : output : 2.5 V             :         : 4         : Y              
+display_reg2[3]              : AB17      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_2[2]         : AB18      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_1[0]         : AB19      : output : 2.5 V             :         : 4         : Y              
 display_out4[2]              : AB20      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AB21      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB22      :        :                   :         : 4         :                
 RESERVED_INPUT               : AB23      :        :                   :         : 5         :                
 RESERVED_INPUT               : AB24      :        :                   :         : 5         :                
-RESERVED_INPUT               : AB25      :        :                   :         : 5         :                
-RESERVED_INPUT               : AB26      :        :                   :         : 5         :                
-MEM[7]                       : AB27      : output : 2.5 V             :         : 5         : N              
-MEM[6]                       : AB28      : output : 2.5 V             :         : 5         : N              
+JUMP_UC                      : AB25      : output : 2.5 V             :         : 5         : N              
+RgTO[0]                      : AB26      : output : 2.5 V             :         : 5         : N              
+RgTO[1]                      : AB27      : output : 2.5 V             :         : 5         : N              
+ResetREG                     : AB28      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT               : AC1       :        :                   :         : 2         :                
 RESERVED_INPUT               : AC2       :        :                   :         : 2         :                
 RESERVED_INPUT               : AC3       :        :                   :         : 2         :                
@@ -160,25 +160,25 @@ GND                          : AC6       : gnd    :                   :         
 RESERVED_INPUT               : AC7       :        :                   :         : 3         :                
 RESERVED_INPUT               : AC8       :        :                   :         : 3         :                
 GND                          : AC9       : gnd    :                   :         :           :                
-MEM[15]                      : AC10      : output : 2.5 V             :         : 3         : N              
-saida_mux[3]                 : AC11      : output : 2.5 V             :         : 3         : N              
-ULAop[0]                     : AC12      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT               : AC10      :        :                   :         : 3         :                
+RESERVED_INPUT               : AC11      :        :                   :         : 3         :                
+RESERVED_INPUT               : AC12      :        :                   :         : 3         :                
 GND                          : AC13      : gnd    :                   :         :           :                
-display_ula[1]               : AC14      : output : 2.5 V             :         : 3         : N              
-display_ula[2]               : AC15      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT               : AC14      :        :                   :         : 3         :                
+RESERVED_INPUT               : AC15      :        :                   :         : 4         :                
 GND                          : AC16      : gnd    :                   :         :           :                
-display_reg1[6]              : AC17      : output : 2.5 V             :         : 4         : Y              
-display_reg2[1]              : AC18      : output : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT               : AC19      :        :                   :         : 4         :                
+display_reg2[6]              : AC17      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_2[1]         : AC18      : output : 2.5 V             :         : 4         : Y              
+REG_1[1]                     : AC19      : output : 2.5 V             :         : 4         : N              
 GND                          : AC20      : gnd    :                   :         :           :                
 RESERVED_INPUT               : AC21      :        :                   :         : 4         :                
 RESERVED_INPUT               : AC22      :        :                   :         : 4         :                
 GND                          : AC23      : gnd    :                   :         :           :                
 RESERVED_INPUT               : AC24      :        :                   :         : 5         :                
 RESERVED_INPUT               : AC25      :        :                   :         : 5         :                
-RESERVED_INPUT               : AC26      :        :                   :         : 5         :                
-RESERVED_INPUT               : AC27      :        :                   :         : 5         :                
-RESERVED_INPUT               : AC28      :        :                   :         : 5         :                
+RegEscolhido[0]              : AC26      : output : 2.5 V             :         : 5         : N              
+rst_deb                      : AC27      : input  : 2.5 V             :         : 5         : Y              
+input_key                    : AC28      : input  : 2.5 V             :         : 5         : Y              
 RESERVED_INPUT               : AD1       :        :                   :         : 2         :                
 RESERVED_INPUT               : AD2       :        :                   :         : 2         :                
 RESERVED_INPUT               : AD3       :        :                   :         : 2         :                
@@ -189,24 +189,24 @@ RESERVED_INPUT               : AD7       :        :                   :         
 RESERVED_INPUT               : AD8       :        :                   :         : 3         :                
 VCCIO3                       : AD9       : power  :                   : 2.5V    : 3         :                
 RESERVED_INPUT               : AD10      :        :                   :         : 3         :                
-saida_mux[5]                 : AD11      : output : 2.5 V             :         : 3         : N              
-saida_mux[6]                 : AD12      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT               : AD11      :        :                   :         : 3         :                
+RESERVED_INPUT               : AD12      :        :                   :         : 3         :                
 VCCIO3                       : AD13      : power  :                   : 2.5V    : 3         :                
-display_ula[3]               : AD14      : output : 2.5 V             :         : 3         : N              
-display_ula[6]               : AD15      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT               : AD14      :        :                   :         : 3         :                
+RESERVED_INPUT               : AD15      :        :                   :         : 4         :                
 VCCIO4                       : AD16      : power  :                   : 2.5V    : 4         :                
-REG_2[1]                     : AD17      : output : 2.5 V             :         : 4         : N              
-display_reg2[0]              : AD18      : output : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT               : AD19      :        :                   :         : 4         :                
+display_reg1[0]              : AD17      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_2[0]         : AD18      : output : 2.5 V             :         : 4         : Y              
+REG_2[3]                     : AD19      : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : AD20      : power  :                   : 2.5V    : 4         :                
 RESERVED_INPUT               : AD21      :        :                   :         : 4         :                
 RESERVED_INPUT               : AD22      :        :                   :         : 4         :                
 VCCIO4                       : AD23      : power  :                   : 2.5V    : 4         :                
 display_out4[4]              : AD24      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AD25      :        :                   :         : 4         :                
-RESERVED_INPUT               : AD26      :        :                   :         : 5         :                
-RESERVED_INPUT               : AD27      :        :                   :         : 5         :                
-RESERVED_INPUT               : AD28      :        :                   :         : 5         :                
+SAIDA_ULA[2]                 : AD26      : output : 2.5 V             :         : 5         : N              
+SAIDA_ULA[0]                 : AD27      : output : 2.5 V             :         : 5         : N              
+CLEARD                       : AD28      : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT               : AE1       :        :                   :         : 2         :                
 RESERVED_INPUT               : AE2       :        :                   :         : 2         :                
 RESERVED_INPUT               : AE3       :        :                   :         : 2         :                
@@ -216,25 +216,25 @@ RESERVED_INPUT               : AE6       :        :                   :         
 RESERVED_INPUT               : AE7       :        :                   :         : 3         :                
 RESERVED_INPUT               : AE8       :        :                   :         : 3         :                
 RESERVED_INPUT               : AE9       :        :                   :         : 3         :                
-RgIN[1]                      : AE10      : output : 2.5 V             :         : 3         : N              
-MEM[10]                      : AE11      : output : 2.5 V             :         : 3         : N              
-RgTO[0]                      : AE12      : output : 2.5 V             :         : 3         : N              
-MEM[8]                       : AE13      : output : 2.5 V             :         : 3         : N              
-saida_mux[2]                 : AE14      : output : 2.5 V             :         : 3         : N              
-SAIDA_ULA[2]                 : AE15      : output : 2.5 V             :         : 4         : N              
-REG_1[1]                     : AE16      : output : 2.5 V             :         : 4         : N              
-MEM[2]                       : AE17      : output : 2.5 V             :         : 4         : N              
-REG_2[3]                     : AE18      : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT               : AE19      :        :                   :         : 4         :                
+RESERVED_INPUT               : AE10      :        :                   :         : 3         :                
+RESERVED_INPUT               : AE11      :        :                   :         : 3         :                
+RESERVED_INPUT               : AE12      :        :                   :         : 3         :                
+RESERVED_INPUT               : AE13      :        :                   :         : 3         :                
+RESERVED_INPUT               : AE14      :        :                   :         : 3         :                
+RESERVED_INPUT               : AE15      :        :                   :         : 4         :                
+RESERVED_INPUT               : AE16      :        :                   :         : 4         :                
+display_reg1[1]              : AE17      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_1[6]         : AE18      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_1[4]         : AE19      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AE20      :        :                   :         : 4         :                
 RESERVED_INPUT               : AE21      :        :                   :         : 4         :                
-RESERVED_INPUT               : AE22      :        :                   :         : 4         :                
+REG_1[0]                     : AE22      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT               : AE23      :        :                   :         : 4         :                
 RESERVED_INPUT               : AE24      :        :                   :         : 4         :                
 RESERVED_INPUT               : AE25      :        :                   :         : 4         :                
 RESERVED_INPUT               : AE26      :        :                   :         : 5         :                
-RESERVED_INPUT               : AE27      :        :                   :         : 5         :                
-RESERVED_INPUT               : AE28      :        :                   :         : 5         :                
+ULAop[1]                     : AE27      : output : 2.5 V             :         : 5         : N              
+RegEscolhido[1]              : AE28      : output : 2.5 V             :         : 5         : N              
 GND                          : AF1       : gnd    :                   :         :           :                
 RESERVED_INPUT               : AF2       :        :                   :         : 2         :                
 RESERVED_INPUT               : AF3       :        :                   :         : 3         :                
@@ -244,19 +244,19 @@ RESERVED_INPUT               : AF6       :        :                   :         
 RESERVED_INPUT               : AF7       :        :                   :         : 3         :                
 RESERVED_INPUT               : AF8       :        :                   :         : 3         :                
 RESERVED_INPUT               : AF9       :        :                   :         : 3         :                
-MEM[13]                      : AF10      : output : 2.5 V             :         : 3         : N              
-MEM[11]                      : AF11      : output : 2.5 V             :         : 3         : N              
-MEM[14]                      : AF12      : output : 2.5 V             :         : 3         : N              
-ResetREG                     : AF13      : output : 2.5 V             :         : 3         : N              
-saida_mux[4]                 : AF14      : output : 2.5 V             :         : 3         : N              
-display_ula[0]               : AF15      : output : 2.5 V             :         : 4         : N              
-REG_1[3]                     : AF16      : output : 2.5 V             :         : 4         : N              
-MEM[0]                       : AF17      : output : 2.5 V             :         : 4         : N              
-display_reg2[5]              : AF18      : output : 2.5 V             :         : 4         : Y              
-RESERVED_INPUT               : AF19      :        :                   :         : 4         :                
+RESERVED_INPUT               : AF10      :        :                   :         : 3         :                
+RESERVED_INPUT               : AF11      :        :                   :         : 3         :                
+RESERVED_INPUT               : AF12      :        :                   :         : 3         :                
+RESERVED_INPUT               : AF13      :        :                   :         : 3         :                
+RESERVED_INPUT               : AF14      :        :                   :         : 3         :                
+RESERVED_INPUT               : AF15      :        :                   :         : 4         :                
+RESERVED_INPUT               : AF16      :        :                   :         : 4         :                
+display_reg1[4]              : AF17      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_2[5]         : AF18      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_1[5]         : AF19      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AF20      :        :                   :         : 4         :                
 RESERVED_INPUT               : AF21      :        :                   :         : 4         :                
-RESERVED_INPUT               : AF22      :        :                   :         : 4         :                
+REG_1[2]                     : AF22      : output : 2.5 V             :         : 4         : N              
 display_out4[5]              : AF23      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AF24      :        :                   :         : 4         :                
 RESERVED_INPUT               : AF25      :        :                   :         : 4         :                
@@ -272,22 +272,22 @@ RESERVED_INPUT               : AG6       :        :                   :         
 RESERVED_INPUT               : AG7       :        :                   :         : 3         :                
 RESERVED_INPUT               : AG8       :        :                   :         : 3         :                
 GND                          : AG9       : gnd    :                   :         :           :                
-JUMP_UC                      : AG10      : output : 2.5 V             :         : 3         : N              
-MEM[12]                      : AG11      : output : 2.5 V             :         : 3         : N              
-display_ula[5]               : AG12      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT               : AG10      :        :                   :         : 3         :                
+RESERVED_INPUT               : AG11      :        :                   :         : 3         :                
+RESERVED_INPUT               : AG12      :        :                   :         : 3         :                
 GND                          : AG13      : gnd    :                   :         :           :                
 GND+                         : AG14      :        :                   :         : 3         :                
 GND+                         : AG15      :        :                   :         : 4         :                
 GND                          : AG16      : gnd    :                   :         :           :                
-REG_1[2]                     : AG17      : output : 2.5 V             :         : 4         : N              
-MEM[1]                       : AG18      : output : 2.5 V             :         : 4         : N              
-display_reg2[4]              : AG19      : output : 2.5 V             :         : 4         : Y              
+display_reg1[2]              : AG17      : output : 2.5 V             :         : 4         : Y              
+display_reg1[5]              : AG18      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_2[4]         : AG19      : output : 2.5 V             :         : 4         : Y              
 GND                          : AG20      : gnd    :                   :         :           :                
-REG_2[2]                     : AG21      : output : 2.5 V             :         : 4         : N              
+saida_display_0_1[2]         : AG21      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AG22      :        :                   :         : 4         :                
 RESERVED_INPUT               : AG23      :        :                   :         : 4         :                
 GND                          : AG24      : gnd    :                   :         :           :                
-RESERVED_INPUT               : AG25      :        :                   :         : 4         :                
+REG_1[3]                     : AG25      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT               : AG26      :        :                   :         : 4         :                
 GND                          : AG27      : gnd    :                   :         :           :                
 VCCIO5                       : AG28      : power  :                   : 2.5V    : 5         :                
@@ -299,22 +299,22 @@ RESERVED_INPUT               : AH6       :        :                   :         
 RESERVED_INPUT               : AH7       :        :                   :         : 3         :                
 RESERVED_INPUT               : AH8       :        :                   :         : 3         :                
 VCCIO3                       : AH9       : power  :                   : 2.5V    : 3         :                
-MEM[3]                       : AH10      : output : 2.5 V             :         : 3         : N              
-RgIN[0]                      : AH11      : output : 2.5 V             :         : 3         : N              
-display_ula[4]               : AH12      : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT               : AH10      :        :                   :         : 3         :                
+RESERVED_INPUT               : AH11      :        :                   :         : 3         :                
+RESERVED_INPUT               : AH12      :        :                   :         : 3         :                
 VCCIO3                       : AH13      : power  :                   : 2.5V    : 3         :                
 GND+                         : AH14      :        :                   :         : 3         :                
 GND+                         : AH15      :        :                   :         : 4         :                
 VCCIO4                       : AH16      : power  :                   : 2.5V    : 4         :                
-REG_1[0]                     : AH17      : output : 2.5 V             :         : 4         : N              
-display_reg2[6]              : AH18      : output : 2.5 V             :         : 4         : Y              
-display_reg2[3]              : AH19      : output : 2.5 V             :         : 4         : Y              
+display_reg1[3]              : AH17      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_2[6]         : AH18      : output : 2.5 V             :         : 4         : Y              
+saida_display_0_2[3]         : AH19      : output : 2.5 V             :         : 4         : Y              
 VCCIO4                       : AH20      : power  :                   : 2.5V    : 4         :                
-REG_2[0]                     : AH21      : output : 2.5 V             :         : 4         : N              
+saida_display_0_1[3]         : AH21      : output : 2.5 V             :         : 4         : Y              
 RESERVED_INPUT               : AH22      :        :                   :         : 4         :                
 RESERVED_INPUT               : AH23      :        :                   :         : 4         :                
 VCCIO4                       : AH24      : power  :                   : 2.5V    : 4         :                
-RESERVED_INPUT               : AH25      :        :                   :         : 4         :                
+REG_2[2]                     : AH25      : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT               : AH26      :        :                   :         : 4         :                
 VCCIO4                       : AH27      : power  :                   : 2.5V    : 4         :                
 VCCIO1                       : B1        : power  :                   : 2.5V    : 1         :                
@@ -445,7 +445,7 @@ GND                          : F13       : gnd    :                   :         
 RESERVED_INPUT               : F14       :        :                   :         : 8         :                
 RESERVED_INPUT               : F15       :        :                   :         : 7         :                
 GND                          : F16       : gnd    :                   :         :           :                
-CLEARD                       : F17       : output : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT               : F17       :        :                   :         : 7         :                
 b_out[4]                     : F18       : output : 2.5 V             :         : 7         : Y              
 b_out[1]                     : F19       : output : 2.5 V             :         : 7         : Y              
 GND                          : F20       : gnd    :                   :         :           :                
@@ -790,9 +790,9 @@ RESERVED_INPUT               : V22       :        :                   :         
 RESERVED_INPUT               : V23       :        :                   :         : 5         :                
 RESERVED_INPUT               : V24       :        :                   :         : 5         :                
 RESERVED_INPUT               : V25       :        :                   :         : 5         :                
-RESERVED_INPUT               : V26       :        :                   :         : 5         :                
-MEM[5]                       : V27       : output : 2.5 V             :         : 5         : N              
-MEM[4]                       : V28       : output : 2.5 V             :         : 5         : N              
+ULAop[0]                     : V26       : output : 2.5 V             :         : 5         : N              
+RgIN[0]                      : V27       : output : 2.5 V             :         : 5         : N              
+RgIN[1]                      : V28       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT               : W1        :        :                   :         : 2         :                
 RESERVED_INPUT               : W2        :        :                   :         : 2         :                
 RESERVED_INPUT               : W3        :        :                   :         : 2         :                
@@ -832,19 +832,19 @@ VCCA1                        : Y8        : power  :                   : 2.5V    
 VCCD_PLL1                    : Y9        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT               : Y10       :        :                   :         : 3         :                
 GND                          : Y11       : gnd    :                   :         :           :                
-RegEscolhido[2]              : Y12       : output : 2.5 V             :         : 3         : N              
-RegEscolhido[3]              : Y13       : output : 2.5 V             :         : 3         : N              
-SAIDA_ULA[3]                 : Y14       : output : 2.5 V             :         : 3         : N              
-SAIDA_ULA[0]                 : Y15       : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT               : Y16       :        :                   :         : 4         :                
-RESERVED_INPUT               : Y17       :        :                   :         : 4         :                
+RESERVED_INPUT               : Y12       :        :                   :         : 3         :                
+RESERVED_INPUT               : Y13       :        :                   :         : 3         :                
+RESERVED_INPUT               : Y14       :        :                   :         : 3         :                
+RESERVED_INPUT               : Y15       :        :                   :         : 3         :                
+REG_2[0]                     : Y16       : output : 2.5 V             :         : 4         : N              
+REG_2[1]                     : Y17       : output : 2.5 V             :         : 4         : N              
 GND                          : Y18       : gnd    :                   :         :           :                
 display_out4[6]              : Y19       : output : 2.5 V             :         : 4         : Y              
 VCCD_PLL4                    : Y20       : power  :                   : 1.2V    :           :                
 VCCA4                        : Y21       : power  :                   : 2.5V    :           :                
 display_out2[1]              : Y22       : output : 2.5 V             :         : 5         : Y              
-RESERVED_INPUT               : Y23       :        :                   :         : 5         :                
-RESERVED_INPUT               : Y24       :        :                   :         : 5         :                
+SAIDA_ULA[1]                 : Y23       : output : 2.5 V             :         : 5         : N              
+SAIDA_ULA[3]                 : Y24       : output : 2.5 V             :         : 5         : N              
 display_out3[2]              : Y25       : output : 2.5 V             :         : 5         : Y              
 display_out3[4]              : Y26       : output : 2.5 V             :         : 5         : Y              
 GND+                         : Y27       :        :                   :         : 5         :                

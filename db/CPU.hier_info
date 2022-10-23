@@ -2,12 +2,9 @@
 MasterCLEAR <= inst13.DB_MAX_OUTPUT_PORT_TYPE
 MCLEAR => inst13.IN0
 MCLEAR => inst17.IN1
-CLK_in => inst9.IN0
-CLK_in => inst100.IN0
-CLK_in => inst98.IN0
-CLK_in => inst110.IN0
-CLK_in => inst117.IN0
-CLK_in => inst116.IN0
+CLK_in => debouncer:inst9.clk_fpga
+rst_deb => debouncer:inst9.rst_debouncer
+input_key => debouncer:inst9.input_key
 JUMP_UC <= UC:inst14.Jump_UC
 ResetREG <= inst17.DB_MAX_OUTPUT_PORT_TYPE
 CLEARD <= Mclear_UC.DB_MAX_OUTPUT_PORT_TYPE
@@ -67,29 +64,6 @@ display_reg2[3] <= display:inst114.d_out[3]
 display_reg2[4] <= display:inst114.d_out[4]
 display_reg2[5] <= display:inst114.d_out[5]
 display_reg2[6] <= display:inst114.d_out[6]
-display_ula[0] <= display:inst6.d_out[0]
-display_ula[1] <= display:inst6.d_out[1]
-display_ula[2] <= display:inst6.d_out[2]
-display_ula[3] <= display:inst6.d_out[3]
-display_ula[4] <= display:inst6.d_out[4]
-display_ula[5] <= display:inst6.d_out[5]
-display_ula[6] <= display:inst6.d_out[6]
-MEM[0] <= b_s[0].DB_MAX_OUTPUT_PORT_TYPE
-MEM[1] <= b_s[1].DB_MAX_OUTPUT_PORT_TYPE
-MEM[2] <= b_s[2].DB_MAX_OUTPUT_PORT_TYPE
-MEM[3] <= b_s[3].DB_MAX_OUTPUT_PORT_TYPE
-MEM[4] <= b_s[4].DB_MAX_OUTPUT_PORT_TYPE
-MEM[5] <= b_s[5].DB_MAX_OUTPUT_PORT_TYPE
-MEM[6] <= b_s[6].DB_MAX_OUTPUT_PORT_TYPE
-MEM[7] <= b_s[7].DB_MAX_OUTPUT_PORT_TYPE
-MEM[8] <= b_s[8].DB_MAX_OUTPUT_PORT_TYPE
-MEM[9] <= b_s[9].DB_MAX_OUTPUT_PORT_TYPE
-MEM[10] <= b_s[10].DB_MAX_OUTPUT_PORT_TYPE
-MEM[11] <= b_s[11].DB_MAX_OUTPUT_PORT_TYPE
-MEM[12] <= b_s[12].DB_MAX_OUTPUT_PORT_TYPE
-MEM[13] <= b_s[13].DB_MAX_OUTPUT_PORT_TYPE
-MEM[14] <= b_s[14].DB_MAX_OUTPUT_PORT_TYPE
-MEM[15] <= b_s[15].DB_MAX_OUTPUT_PORT_TYPE
 REG_1[0] <= Reg4:inst101.S4[0]
 REG_1[1] <= Reg4:inst101.S4[1]
 REG_1[2] <= Reg4:inst101.S4[2]
@@ -102,17 +76,24 @@ RegEscolhido[0] <= RG_IN[0].DB_MAX_OUTPUT_PORT_TYPE
 RegEscolhido[1] <= RG_IN[1].DB_MAX_OUTPUT_PORT_TYPE
 RegEscolhido[2] <= RG_IN[2].DB_MAX_OUTPUT_PORT_TYPE
 RegEscolhido[3] <= RG_IN[3].DB_MAX_OUTPUT_PORT_TYPE
-saida_mux[0] <= display:inst85.d_out[0]
-saida_mux[1] <= display:inst85.d_out[1]
-saida_mux[2] <= display:inst85.d_out[2]
-saida_mux[3] <= display:inst85.d_out[3]
-saida_mux[4] <= display:inst85.d_out[4]
-saida_mux[5] <= display:inst85.d_out[5]
-saida_mux[6] <= display:inst85.d_out[6]
-SAIDA_ULA[0] <= ULA_out[0].DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_ULA[1] <= ULA_out[1].DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_ULA[2] <= ULA_out[2].DB_MAX_OUTPUT_PORT_TYPE
-SAIDA_ULA[3] <= ULA_out[3].DB_MAX_OUTPUT_PORT_TYPE
+saida_display_0_1[0] <= display:inst21.d_out[0]
+saida_display_0_1[1] <= display:inst21.d_out[1]
+saida_display_0_1[2] <= display:inst21.d_out[2]
+saida_display_0_1[3] <= display:inst21.d_out[3]
+saida_display_0_1[4] <= display:inst21.d_out[4]
+saida_display_0_1[5] <= display:inst21.d_out[5]
+saida_display_0_1[6] <= display:inst21.d_out[6]
+saida_display_0_2[0] <= display:inst23.d_out[0]
+saida_display_0_2[1] <= display:inst23.d_out[1]
+saida_display_0_2[2] <= display:inst23.d_out[2]
+saida_display_0_2[3] <= display:inst23.d_out[3]
+saida_display_0_2[4] <= display:inst23.d_out[4]
+saida_display_0_2[5] <= display:inst23.d_out[5]
+saida_display_0_2[6] <= display:inst23.d_out[6]
+SAIDA_ULA[0] <= ula_out[0].DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_ULA[1] <= ula_out[1].DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_ULA[2] <= ula_out[2].DB_MAX_OUTPUT_PORT_TYPE
+SAIDA_ULA[3] <= ula_out[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |CPU|UC:inst14
@@ -266,18 +247,18 @@ data_a[13] => ~NO_FANOUT~
 data_a[14] => ~NO_FANOUT~
 data_a[15] => ~NO_FANOUT~
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_nnr3:auto_generated.address_a[0]
-address_a[1] => altsyncram_nnr3:auto_generated.address_a[1]
-address_a[2] => altsyncram_nnr3:auto_generated.address_a[2]
-address_a[3] => altsyncram_nnr3:auto_generated.address_a[3]
-address_a[4] => altsyncram_nnr3:auto_generated.address_a[4]
-address_a[5] => altsyncram_nnr3:auto_generated.address_a[5]
-address_a[6] => altsyncram_nnr3:auto_generated.address_a[6]
-address_a[7] => altsyncram_nnr3:auto_generated.address_a[7]
+address_a[0] => altsyncram_3sr3:auto_generated.address_a[0]
+address_a[1] => altsyncram_3sr3:auto_generated.address_a[1]
+address_a[2] => altsyncram_3sr3:auto_generated.address_a[2]
+address_a[3] => altsyncram_3sr3:auto_generated.address_a[3]
+address_a[4] => altsyncram_3sr3:auto_generated.address_a[4]
+address_a[5] => altsyncram_3sr3:auto_generated.address_a[5]
+address_a[6] => altsyncram_3sr3:auto_generated.address_a[6]
+address_a[7] => altsyncram_3sr3:auto_generated.address_a[7]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_nnr3:auto_generated.clock0
+clock0 => altsyncram_3sr3:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -287,29 +268,29 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_nnr3:auto_generated.q_a[0]
-q_a[1] <= altsyncram_nnr3:auto_generated.q_a[1]
-q_a[2] <= altsyncram_nnr3:auto_generated.q_a[2]
-q_a[3] <= altsyncram_nnr3:auto_generated.q_a[3]
-q_a[4] <= altsyncram_nnr3:auto_generated.q_a[4]
-q_a[5] <= altsyncram_nnr3:auto_generated.q_a[5]
-q_a[6] <= altsyncram_nnr3:auto_generated.q_a[6]
-q_a[7] <= altsyncram_nnr3:auto_generated.q_a[7]
-q_a[8] <= altsyncram_nnr3:auto_generated.q_a[8]
-q_a[9] <= altsyncram_nnr3:auto_generated.q_a[9]
-q_a[10] <= altsyncram_nnr3:auto_generated.q_a[10]
-q_a[11] <= altsyncram_nnr3:auto_generated.q_a[11]
-q_a[12] <= altsyncram_nnr3:auto_generated.q_a[12]
-q_a[13] <= altsyncram_nnr3:auto_generated.q_a[13]
-q_a[14] <= altsyncram_nnr3:auto_generated.q_a[14]
-q_a[15] <= altsyncram_nnr3:auto_generated.q_a[15]
+q_a[0] <= altsyncram_3sr3:auto_generated.q_a[0]
+q_a[1] <= altsyncram_3sr3:auto_generated.q_a[1]
+q_a[2] <= altsyncram_3sr3:auto_generated.q_a[2]
+q_a[3] <= altsyncram_3sr3:auto_generated.q_a[3]
+q_a[4] <= altsyncram_3sr3:auto_generated.q_a[4]
+q_a[5] <= altsyncram_3sr3:auto_generated.q_a[5]
+q_a[6] <= altsyncram_3sr3:auto_generated.q_a[6]
+q_a[7] <= altsyncram_3sr3:auto_generated.q_a[7]
+q_a[8] <= altsyncram_3sr3:auto_generated.q_a[8]
+q_a[9] <= altsyncram_3sr3:auto_generated.q_a[9]
+q_a[10] <= altsyncram_3sr3:auto_generated.q_a[10]
+q_a[11] <= altsyncram_3sr3:auto_generated.q_a[11]
+q_a[12] <= altsyncram_3sr3:auto_generated.q_a[12]
+q_a[13] <= altsyncram_3sr3:auto_generated.q_a[13]
+q_a[14] <= altsyncram_3sr3:auto_generated.q_a[14]
+q_a[15] <= altsyncram_3sr3:auto_generated.q_a[15]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|CPU|mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_nnr3:auto_generated
+|CPU|mem256x16:inst|rom01:inst|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -678,6 +659,50 @@ display_in[3] => inst42.IN0
 display_in[3] => inst41.IN0
 display_in[3] => inst49.IN0
 display_in[3] => inst48.IN0
+
+
+|CPU|debouncer:inst9
+clk_fpga => counter[0].CLK
+clk_fpga => counter[1].CLK
+clk_fpga => counter[2].CLK
+clk_fpga => counter[3].CLK
+clk_fpga => counter[4].CLK
+clk_fpga => counter[5].CLK
+clk_fpga => counter[6].CLK
+clk_fpga => counter[7].CLK
+clk_fpga => counter[8].CLK
+clk_fpga => counter[9].CLK
+clk_fpga => counter[10].CLK
+clk_fpga => counter[11].CLK
+clk_fpga => counter[12].CLK
+clk_fpga => counter[13].CLK
+clk_fpga => counter[14].CLK
+clk_fpga => counter[15].CLK
+clk_fpga => out_key~reg0.CLK
+clk_fpga => intermediate.CLK
+rst_debouncer => counter[0].ACLR
+rst_debouncer => counter[1].ACLR
+rst_debouncer => counter[2].ACLR
+rst_debouncer => counter[3].ACLR
+rst_debouncer => counter[4].ACLR
+rst_debouncer => counter[5].ACLR
+rst_debouncer => counter[6].ACLR
+rst_debouncer => counter[7].ACLR
+rst_debouncer => counter[8].ACLR
+rst_debouncer => counter[9].ACLR
+rst_debouncer => counter[10].ACLR
+rst_debouncer => counter[11].ACLR
+rst_debouncer => counter[12].ACLR
+rst_debouncer => counter[13].ACLR
+rst_debouncer => counter[14].ACLR
+rst_debouncer => counter[15].ACLR
+rst_debouncer => out_key~reg0.ALOAD
+rst_debouncer => intermediate.ALOAD
+input_key => always0.IN1
+input_key => out_key~reg0.ADATA
+input_key => intermediate.ADATA
+input_key => intermediate.DATAIN
+out_key <= out_key~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |CPU|Count8:inst10
@@ -1812,7 +1837,7 @@ display_in[3] => inst49.IN0
 display_in[3] => inst48.IN0
 
 
-|CPU|display:inst6
+|CPU|display:inst21
 d_out[0] <= inst000.DB_MAX_OUTPUT_PORT_TYPE
 d_out[1] <= inst123.DB_MAX_OUTPUT_PORT_TYPE
 d_out[2] <= inst53.DB_MAX_OUTPUT_PORT_TYPE
@@ -1864,7 +1889,14 @@ display_in[3] => inst49.IN0
 display_in[3] => inst48.IN0
 
 
-|CPU|display:inst85
+|CPU|LPM_CONSTANT:inst22
+result[0] <= <GND>
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+
+
+|CPU|display:inst23
 d_out[0] <= inst000.DB_MAX_OUTPUT_PORT_TYPE
 d_out[1] <= inst123.DB_MAX_OUTPUT_PORT_TYPE
 d_out[2] <= inst53.DB_MAX_OUTPUT_PORT_TYPE
@@ -1916,48 +1948,10 @@ display_in[3] => inst49.IN0
 display_in[3] => inst48.IN0
 
 
-|CPU|UC:inst3
-sClear <= dmux1x4:inst3.s_d2
-INPUT[0] => ~NO_FANOUT~
-INPUT[1] => ~NO_FANOUT~
-INPUT[2] => ~NO_FANOUT~
-INPUT[3] => ~NO_FANOUT~
-INPUT[4] => ~NO_FANOUT~
-INPUT[5] => ~NO_FANOUT~
-INPUT[6] => ~NO_FANOUT~
-INPUT[7] => ~NO_FANOUT~
-INPUT[8] => inst.IN0
-INPUT[9] => inst1.IN1
-INPUT[10] => dmux1x4:inst3.Sel0
-INPUT[11] => dmux1x4:inst3.Sel1
-INPUT[12] => RgIN[0].DATAIN
-INPUT[13] => RgIN[1].DATAIN
-INPUT[14] => RgTO[0].DATAIN
-INPUT[15] => RgTO[1].DATAIN
-Jump_UC <= dmux1x4:inst3.s_d3
-ResetRg <= dmux1x4:inst3.s_d1
-RgIN[0] <= INPUT[12].DB_MAX_OUTPUT_PORT_TYPE
-RgIN[1] <= INPUT[13].DB_MAX_OUTPUT_PORT_TYPE
-RgTO[0] <= INPUT[14].DB_MAX_OUTPUT_PORT_TYPE
-RgTO[1] <= INPUT[15].DB_MAX_OUTPUT_PORT_TYPE
-ULAop[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-ULAop[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|CPU|UC:inst3|dmux1x4:inst3
-s_d0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
-V => inst.IN0
-V => inst2.IN0
-V => inst3.IN0
-V => inst4.IN0
-Sel0 => inst5.IN0
-Sel0 => inst2.IN1
-Sel0 => inst4.IN1
-Sel1 => inst6.IN0
-Sel1 => inst3.IN2
-Sel1 => inst4.IN2
-s_d1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-s_d2 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-s_d3 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+|CPU|LPM_CONSTANT:inst24
+result[0] <= <GND>
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
 
 
